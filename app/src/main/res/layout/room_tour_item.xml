@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:id="@+id/cardView_Panorama"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="7dp">
+
+
+
+        <ImageView
+            android:id="@+id/img_room_tour_list"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="185dp"
+            android:background="@drawable/roomtour"
+            />
+
+        <TextView
+            android:id="@+id/name_room_tour_list"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOTEL"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"
+            />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

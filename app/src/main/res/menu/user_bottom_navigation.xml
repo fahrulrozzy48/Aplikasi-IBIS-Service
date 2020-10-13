@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item
+
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_star_hotel"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_literature_filled"
+        android:title="Layanan"
+        />
+    <item
+        android:id="@+id/nav_status"
+        android:icon="@drawable/ic_bed11"
+        android:title="Status"
+        />
+</menu>

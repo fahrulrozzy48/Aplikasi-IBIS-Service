@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "845631843284",
+    "firebase_url": "https://ibisfood-77e18.firebaseio.com",
+    "project_id": "ibisfood-77e18",
+    "storage_bucket": "ibisfood-77e18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845631843284:android:719394d22b92763bfa8441",
+        "android_client_info": {
+          "package_name": "com.example.ibisfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845631843284-7k47n3cqfg7cq7o603ve16uio72rjf1a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ibisfood",
+            "certificate_hash": "f02a7d859fac7f2475e06b2c55f236b94254872b"
+          }
+        },
+        {
+          "client_id": "845631843284-lh94c9h9e18bk46v8gjhq89gocof0g8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_Tay2V793uLyVTBWJg782wDagmJ0qAWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845631843284-lh94c9h9e18bk46v8gjhq89gocof0g8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

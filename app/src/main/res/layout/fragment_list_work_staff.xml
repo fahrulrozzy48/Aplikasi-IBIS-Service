@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#BEF6F6F6"
+    tools:context=".StaffUI.ListWorkStaffFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_toolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Job List"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/abeezee"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/datepickrange_linear"
+        android:layout_below="@id/toolbar_menu"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CV_dariTanggal"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp"
+                android:background="@drawable/bg_round"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/date_dariTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:hint="Dari Tanggal"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/abeezee"
+                        />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_forward_24"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CV_sampaiTanggal"
+                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                app:cardCornerRadius="10dp"
+                android:padding="10dp"
+                android:background="@drawable/bg_round"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/date_sampaiTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:hint="Sampai Tanggal"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/abeezee"
+                        />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="5"
+                        android:src="@drawable/ic_baseline_calendar_today_24"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <Button
+                android:id="@+id/btn_filterDate"
+                android:layout_width="20dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:text="Filter"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_round"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/abeezee"
+                android:enabled="false"
+                />
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_joblist_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datepickrange_linear"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_job_list_staff"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

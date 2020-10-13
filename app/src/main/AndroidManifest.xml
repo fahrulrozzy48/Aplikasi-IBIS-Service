@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ibisfood">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AdminUI.RequestDetailActivity"></activity>
+        <activity android:name=".ManagerUI.RequestApprovalDetailActivity" />
+        <activity android:name=".AdminUI.PermissionRequestActivity" />
+        <activity android:name=".StaffUI.JobDetailActivity" />
+        <activity android:name=".StaffUI.StaffActivity" />
+        <activity android:name=".ManagerUI.ReportDetailActivity" />
+        <activity android:name=".AdminUI.LaporanBulananAdminActivity" />
+        <activity android:name=".AdminUI.ManajemenKategoriActivity" />
+        <activity android:name=".ManagerUI.ManagerActivity" />
+        <activity android:name=".UserUI.WebviewIbisHotelActivity" />
+        <activity android:name=".AdminUI.MessageDetailActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".UserUI.RoomTourView.ToiletFullView" />
+        <activity android:name=".UserUI.RoomTourView.BedRoomTypeBFullView" />
+        <activity android:name=".UserUI.RoomTourView.BedRoomTypeAFullView" />
+        <activity android:name=".UserUI.RoomTourView.LobbyFullView" />
+        <activity android:name=".UserUI.RoomTourView.ResepsionisFullView" />
+        <activity android:name=".UserUI.RoomTourListActivity" />
+        <activity android:name=".UserUI.AddPostServicesActivity" />
+        <activity
+            android:name=".AdminUI.AdminActivity"
+            android:excludeFromRecents="true" />
+        <activity
+            android:name=".SignInActivity"
+            android:excludeFromRecents="true" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserUI.MainActivity"
+            android:excludeFromRecents="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

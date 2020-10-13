@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserUI.RoomTourListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_toolbar"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Room Tour"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/abeezee"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/rv_room_tour_list"-->
+<!--            android:layout_below="@id/toolbar_menu"-->
+<!--            />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_menu"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            >
+            <!--        <ImageView-->
+            <!--            android:layout_marginBottom="20dp"-->
+            <!--            android:layout_width="100dp"-->
+            <!--            android:layout_height="100dp"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:src="@drawable/ibis_logo_2012"/>-->
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pan_Resepsionis"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="185dp"
+                    android:background="@drawable/p_reception"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resepsionis"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/cv_pan_Lobby"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="185dp"
+                    android:background="@drawable/p_lobby"
+                    />
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lobby"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pan_Kamar_A"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="185dp"
+                    android:background="@drawable/p_kamar1"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bedroom Type A"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/cv_pan_Kamar_B"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="185dp"
+                    android:background="@drawable/p_kamar2"
+                    />
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bedroom Type B"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/cv_pan_Toilet"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="185dp"
+                    android:background="@drawable/p_toilet"
+                    />
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Toilet"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

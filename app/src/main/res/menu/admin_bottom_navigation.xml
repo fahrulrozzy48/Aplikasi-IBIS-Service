@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+    <item
+
+        android:id="@+id/nav_message_client"
+        android:icon="@drawable/ic_purchase_order"
+        android:title="Message" />
+    <item
+
+        android:id="@+id/nav_answer_manager"
+        android:icon="@drawable/ic_baseline_requestblack"
+        android:title="Approval" />
+    <item
+        android:id="@+id/nav_menu_tools"
+        android:icon="@drawable/ic_baseline_business_center_24"
+        android:title="Tools"
+        />
+    <item
+        android:id="@+id/nav_profil"
+        android:icon="@drawable/ic_user"
+        android:title="Profil"
+        />
+</menu>

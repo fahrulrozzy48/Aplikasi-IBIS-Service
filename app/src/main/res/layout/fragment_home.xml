@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".UserUI.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carousel"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:fillColor="#5EFFFFFF"
+                app:pageColor="#00000000"
+                app:radius="3dp"
+                app:slideInterval="3000"
+                app:strokeColor="#77777777"
+                app:strokeWidth="1dp"
+                app:indicatorGravity="top|center_horizontal"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="10dp"
+                >
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:padding="20dp"
+                   >
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textStyle="bold"
+                       android:text="Selamat Datang,"
+                       android:textSize="15dp"
+                       android:fontFamily="@font/abeezee"
+                       android:textColor="@color/colorPrimaryDark"
+                       />
+
+                   <TextView
+                       android:id="@+id/user_email_identity"
+                       android:layout_marginTop="5dp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="ibis@ibis.co.id"
+                       android:textColor="@color/colorAccent"
+                       android:textSize="18sp"
+                       android:textStyle="bold"
+                       android:fontFamily="@font/abeezee"
+                       />
+
+
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/btn_webview_ibis"
+                       android:layout_width="match_parent"
+                       android:layout_height="60dp"
+                       app:cardCornerRadius="7dp"
+                       android:layout_marginTop="20dp"
+                       >
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:orientation="horizontal"
+                           android:background="@drawable/bg_round4"
+                           android:padding="10dp"
+                           >
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/web"
+                               />
+
+                           <TextView
+                               android:textAlignment="center"
+                               android:layout_gravity="center"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:textColor="@color/colorWhite"
+                               android:textStyle="bold"
+                               android:text="Website IBIS Official"
+                               android:textSize="15dp"
+                               />
+
+
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+
+
+               </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Kamar "
+            android:textSize="17sp"
+            android:fontFamily="@font/abeezee"
+            android:textColor="@color/colorAccent"
+            />
+        <TextView
+            android:id="@+id/row_kamar_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text="013"
+            android:textSize="17sp"
+            android:fontFamily="@font/abeezee"
+            android:textColor="@color/colorAccent"
+            />
+
+        <TextView
+            android:id="@+id/row_time_staff"
+            android:layout_width="80dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/abeezee"
+            android:text="07/22/2020 16:40"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/row_kategori_staff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kebersihan/Makanan/Internet/Listrik"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/abeezee"
+            />
+
+        <TextView
+            android:id="@+id/row_status_pekerjaan_staff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text=""
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="#21bf73"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#D5D4D4"
+        />
+
+
+
+</LinearLayout>
