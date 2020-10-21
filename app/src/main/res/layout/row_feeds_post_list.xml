@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding= "5dp"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ibis_round"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/abeezee"
+            android:textStyle="bold"
+            android:text="IBIS HOTEL OFFICIAL"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/row_feedsAdmin_image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        />
+
+    <com.borjabravo.readmoretextview.ReadMoreTextView
+        android:id="@+id/row_feedsAdmin_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="hahahahhahahahhahahahhahahahahhhhhhhhhhhhhahahahhahahahhahahahhahahahahhhhhhhhhhhhhhahdasdadjdhsfsfhdhhahdasdadjdhsfsfhdskhfksjhdahgdhafdhagsfdghahdafsdfgagdaghfhfasgdhaghdada  \n"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        app:trimExpandedText="read more"
+        app:showTrimExpandedText="false"
+        app:trimMode="trimModeLength"
+        app:trimLength="80"
+        app:colorClickableText="@color/colorAccent"
+        />
+
+    <TextView
+        android:id="@+id/row_feedsAdmin_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="13sp"
+        android:text="10/04/2020"
+        />
+
+
+</LinearLayout>

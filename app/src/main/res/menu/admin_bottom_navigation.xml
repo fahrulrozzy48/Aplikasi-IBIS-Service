@@ -15,6 +15,10 @@
         android:icon="@drawable/ic_baseline_requestblack"
         android:title="Approval" />
     <item
+        android:id="@+id/nav_feeds_admin"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Feeds" />
+    <item
         android:id="@+id/nav_menu_tools"
         android:icon="@drawable/ic_baseline_business_center_24"
         android:title="Tools"

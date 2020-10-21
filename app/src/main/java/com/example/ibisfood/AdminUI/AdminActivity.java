@@ -43,6 +43,9 @@ public class AdminActivity extends AppCompatActivity {
                 case R.id.nav_answer_manager:
                     pilihFragment = new RequestListFragment();
                     break;
+                case R.id.nav_feeds_admin:
+                    pilihFragment = new FeedsAdminFragment();
+                    break;
                 case R.id.nav_menu_tools:
                     pilihFragment = new MenuListFragment();
                     break;

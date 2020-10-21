@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminUI.RequestDetailActivity"></activity>
+        <activity android:name=".AdminUI.AddPostFeedsAdminActivity"></activity>
+        <activity android:name=".AdminUI.RequestDetailActivity" />
         <activity android:name=".ManagerUI.RequestApprovalDetailActivity" />
         <activity android:name=".AdminUI.PermissionRequestActivity" />
         <activity android:name=".StaffUI.JobDetailActivity" />

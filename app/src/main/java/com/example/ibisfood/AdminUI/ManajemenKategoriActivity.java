@@ -116,6 +116,7 @@ public class ManajemenKategoriActivity extends AppCompatActivity {
             @Override
             public void onSuccess(Void aVoid) {
                 Toast.makeText(ManajemenKategoriActivity.this,"Data berhasil ditambahkan",Toast.LENGTH_SHORT).show();
+                pd.dismiss();
             }
         });
     }
