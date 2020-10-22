@@ -1,5 +1,7 @@
 package com.example.ibisfood.Model;
 
+import com.google.firebase.database.ServerValue;
+
 public class PostReportFromAdminToManagerModel {
 
     private String uAdminEmail;
@@ -17,12 +19,12 @@ public class PostReportFromAdminToManagerModel {
     private String postAdminKey;
     private  long adminAwalTime;
     private  long adminAkhirTime;
-    private  long adminPostTime;
+    private  Object adminPostTime;
 
     public PostReportFromAdminToManagerModel() {
     }
 
-    public PostReportFromAdminToManagerModel(String uAdminEmail, String adminPenanggungJawab, String adminKategoriSatu, String adminInputKategoriSatu, String adminKategoriDua, String adminInputKategoriDua, String adminKategoriTiga, String adminInputKategoriTiga, String adminKategoriEmpat, String adminInputKategoriEmpat, String adminKategoriLima, String adminInputKategoriLima, long adminAwalTime, long adminAkhirTime, long adminPostTime) {
+    public PostReportFromAdminToManagerModel(String uAdminEmail, String adminPenanggungJawab, String adminKategoriSatu, String adminInputKategoriSatu, String adminKategoriDua, String adminInputKategoriDua, String adminKategoriTiga, String adminInputKategoriTiga, String adminKategoriEmpat, String adminInputKategoriEmpat, String adminKategoriLima, String adminInputKategoriLima, long adminAwalTime, long adminAkhirTime) {
         this.uAdminEmail = uAdminEmail;
         this.adminPenanggungJawab = adminPenanggungJawab;
         this.adminKategoriSatu = adminKategoriSatu;
@@ -37,7 +39,7 @@ public class PostReportFromAdminToManagerModel {
         this.adminInputKategoriLima = adminInputKategoriLima;
         this.adminAwalTime = adminAwalTime;
         this.adminAkhirTime = adminAkhirTime;
-        this.adminPostTime = adminPostTime;
+        this.adminPostTime = ServerValue.TIMESTAMP;;
     }
 
     public String getuAdminEmail() {
@@ -176,11 +178,11 @@ public class PostReportFromAdminToManagerModel {
         this.adminAkhirTime = adminAkhirTime;
     }
 
-    public long getAdminPostTime() {
+    public Object getAdminPostTime() {
         return adminPostTime;
     }
 
-    public void setAdminPostTime(long adminPostTime) {
+    public void setAdminPostTime(Object adminPostTime) {
         this.adminPostTime = adminPostTime;
     }
 }

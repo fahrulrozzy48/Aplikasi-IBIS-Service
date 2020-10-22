@@ -135,7 +135,7 @@ public class ReportDetailActivity extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
         calendar.setTimeInMillis(time);
-        String date = DateFormat.format("dd/MM/yyyy",calendar).toString();
+        String date = DateFormat.format("dd MMMM yyyy",calendar).toString();
         return date;
 
 

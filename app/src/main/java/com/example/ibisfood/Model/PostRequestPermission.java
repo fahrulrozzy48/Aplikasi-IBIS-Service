@@ -1,5 +1,7 @@
 package com.example.ibisfood.Model;
 
+import com.google.firebase.database.ServerValue;
+
 public class PostRequestPermission {
 
     private String adminRequestEmail;
@@ -7,7 +9,7 @@ public class PostRequestPermission {
     private String adminRequestDesc;
 //    private String adminRequestImage;
     private String postRequestKey;
-    private long timeSendRequest;
+    private Object timeSendRequest;
 
     private String managerAnswerStatus;
 //    private String managerAnswerStatusTolak;
@@ -16,11 +18,11 @@ public class PostRequestPermission {
     public PostRequestPermission() {
     }
 
-    public PostRequestPermission(String adminRequestEmail, String adminRequestSubjek, String adminRequestDesc, long timeSendRequest, String managerAnswerStatus, String managerAnswerEmail) {
+    public PostRequestPermission(String adminRequestEmail, String adminRequestSubjek, String adminRequestDesc, String managerAnswerStatus, String managerAnswerEmail) {
         this.adminRequestEmail = adminRequestEmail;
         this.adminRequestSubjek = adminRequestSubjek;
         this.adminRequestDesc = adminRequestDesc;
-        this.timeSendRequest = timeSendRequest;
+        this.timeSendRequest = ServerValue.TIMESTAMP;
         this.managerAnswerStatus = managerAnswerStatus;
         this.managerAnswerEmail = managerAnswerEmail;
     }
@@ -75,15 +77,15 @@ public class PostRequestPermission {
         this.postRequestKey = postRequestKey;
     }
 
-    public long getTimeSendRequest() {
+    public Object getTimeSendRequest() {
         return timeSendRequest;
     }
 
-    public void setTimeSendRequest(long timeSendRequest) {
+    public void setTimeSendRequest(Object timeSendRequest) {
         this.timeSendRequest = timeSendRequest;
     }
 
-//    public String getManagerAnswerStatus() {
+    //    public String getManagerAnswerStatus() {
 //        return managerAnswerStatus;
 //    }
 //

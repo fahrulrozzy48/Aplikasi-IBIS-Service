@@ -47,12 +47,13 @@ import java.util.Locale;
 public class PermissionRequestActivity extends AppCompatActivity {
 
     EditText subjectRequest, descRequest;
-    TextView tanggalRequest;
-    Button btnSendRequest, btnPilihTanggalRequest;
-    ImageView imagePickRequest;
+//    TextView tanggalRequest;
+    Button btnSendRequest;
+//    Button btnSendRequest, btnPilihTanggalRequest;
+//    ImageView imagePickRequest;
 
 
-    Date tgl_pengajuan_date;
+//    Date tgl_pengajuan_date;
     Calendar calendar = Calendar.getInstance();
     Locale id = new Locale("in","ID");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY",id);
@@ -80,8 +81,8 @@ public class PermissionRequestActivity extends AppCompatActivity {
         btnSendRequest = findViewById(R.id.btn_send_request_permission);
 
         //date
-        tanggalRequest = findViewById(R.id.date_pilihTanggal_request);
-        btnPilihTanggalRequest = findViewById(R.id.btn_pilihTanggal_request);
+//        tanggalRequest = findViewById(R.id.date_pilihTanggal_request);
+//        btnPilihTanggalRequest = findViewById(R.id.btn_pilihTanggal_request);
 
         pd = new ProgressDialog(this);
 
@@ -91,26 +92,26 @@ public class PermissionRequestActivity extends AppCompatActivity {
 
         //waktu
 
-        btnPilihTanggalRequest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(PermissionRequestActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        calendar.set(year,month,dayOfMonth);
-                        tanggalRequest.setText(simpleDateFormat.format(calendar.getTime()));
-                        tgl_pengajuan_date = calendar.getTime();
-
-
-
-                    }
-                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-                datePickerDialog.show();
-            }
-        });
+//        btnPilihTanggalRequest.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DatePickerDialog datePickerDialog = new DatePickerDialog(PermissionRequestActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//
+//                        calendar.set(year,month,dayOfMonth);
+//                        tanggalRequest.setText(simpleDateFormat.format(calendar.getTime()));
+//                        tgl_pengajuan_date = calendar.getTime();
+//
+//
+//
+//                    }
+//                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+//                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+//                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+//                datePickerDialog.show();
+//            }
+//        });
 
 
 
@@ -140,7 +141,6 @@ public class PermissionRequestActivity extends AppCompatActivity {
                                             currentUser.getEmail(),
                                             subjek,
                                             deskripsi,
-                                            tgl_pengajuan_date.getTime(),
                                             answerManager,
                                             emailManager
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".ManagerUI.ReportDetailActivity">
 
     <ScrollView
@@ -46,6 +47,7 @@
                     android:text="Dari                         : "
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
+                    android:textColor="#000"
                     android:textStyle="bold"
                     />
 
@@ -78,15 +80,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama                      : "
+                    android:text="Nama Penulis          : "
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
+                    android:textColor="#000"
                     android:textStyle="bold"
                     />
 
                 <TextView
                     android:id="@+id/detail_penanggung_jawab"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="ABCDE"
                     android:fontFamily="@font/abeezee"
@@ -128,13 +132,14 @@
                     android:text="Dari Tanggal       : "
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
+                    android:textColor="#000"
                     android:layout_marginLeft="20dp"
                     />
                 <TextView
                     android:id="@+id/detail_awal_tanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="01/07/2020"
+                    android:text="01 Januari 2020"
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -161,6 +166,7 @@
                     android:text="Sampai Tanggal  : "
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
+                    android:textColor="#000"
                     android:layout_marginLeft="20dp"
                     />
 
@@ -168,7 +174,7 @@
                     android:id="@+id/detail_akhir_tanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="01/07/2020"
+                    android:text="31 Januari 2020"
                     android:fontFamily="@font/abeezee"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -204,6 +210,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="WEEKLY REPORT"
+                android:textColor="#000"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textStyle="bold"
@@ -227,6 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="#000"
                     android:text=""
                     android:textSize="17sp"
                     android:layout_marginLeft="10dp"
@@ -237,6 +245,7 @@
                 <TextView
                     android:id="@+id/detail_input_kategori_satu"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -263,6 +272,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
+                    android:textColor="#000"
                     android:textSize="17sp"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/abeezee"
@@ -276,6 +286,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="right"
+                    android:textColor="#000"
                     android:text=""
                     android:textSize="17sp"
                     android:fontFamily="@font/abeezee"
@@ -295,6 +306,7 @@
                     android:id="@+id/detail_kategori_tiga"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
+                    android:textColor="#000"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
@@ -313,6 +325,7 @@
                     android:gravity="right"
                     android:text=""
                     android:textSize="17sp"
+                    android:textColor="#000"
                     android:fontFamily="@font/abeezee"
                     android:layout_marginBottom="10dp"
                     />
@@ -332,6 +345,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="#000"
                     android:text=""
                     android:textSize="17sp"
                     android:layout_marginLeft="10dp"
@@ -347,6 +361,7 @@
                     android:layout_weight="1"
                     android:gravity="right"
                     android:text=""
+                    android:textColor="#000"
                     android:textSize="17sp"
                     android:fontFamily="@font/abeezee"
                     android:layout_marginBottom="10dp"
@@ -368,6 +383,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text=""
+                    android:textColor="#000"
                     android:textSize="17sp"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/abeezee"
@@ -380,6 +396,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="#000"
                     android:gravity="right"
                     android:text=""
                     android:textSize="17sp"

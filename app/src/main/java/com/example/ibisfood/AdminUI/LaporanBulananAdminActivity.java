@@ -45,6 +45,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
 
 
     EditText etKolom1, etKolom2, etKolom3, etKolom4, etKolom5;
+    TextView pilihKategori1, pilihKategori2, pilihKategori3, pilihKategori4, pilihKategori5;
     EditText namaPenanggungJawab;
     Button sendLaporan;
 
@@ -53,9 +54,11 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
 
     //Date
-    Date tgl_pengajuanLaporanWeekly_DariDate, tgl_pengajuanLaporanWeekly_SampaiDate, tgl_pengajuanWeekly;
-    TextView laporDateDariTanggal, laporDateSampaiTanggal, laporKirimTanggal;
-    Button  btnPilihTanggalLapor;
+    Date tgl_pengajuanLaporanWeekly_DariDate, tgl_pengajuanLaporanWeekly_SampaiDate;
+//    Date tgl_pengajuanLaporanWeekly_DariDate, tgl_pengajuanLaporanWeekly_SampaiDate, tgl_pengajuanWeekly;
+    TextView laporDateDariTanggal, laporDateSampaiTanggal;
+//    TextView laporDateDariTanggal, laporDateSampaiTanggal, laporKirimTanggal;
+//    Button  btnPilihTanggalLapor;
     CardView btnDariTanggalLaporan, btnSampaiTanggalLaporan;
     Calendar calendar = Calendar.getInstance();
     Locale id = new Locale("in","ID");
@@ -78,7 +81,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
         //calendar date
         laporDateDariTanggal = findViewById(R.id.laporan_dariTanggal);
         laporDateSampaiTanggal = findViewById(R.id.laporan_sampaiTanggal);
-        laporKirimTanggal = findViewById(R.id.laporan_pilihTanggal);
+//        laporKirimTanggal = findViewById(R.id.laporan_pilihTanggal);
 
         //spinner
         spinner1 = findViewById(R.id.spinner_kategori1);
@@ -86,6 +89,13 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
         spinner3 = findViewById(R.id.spinner_kategori3);
         spinner4 = findViewById(R.id.spinner_kategori4);
         spinner5 = findViewById(R.id.spinner_kategori5);
+
+        //pilih kategori
+        pilihKategori1 = findViewById(R.id.pilihKategori1);
+        pilihKategori2 = findViewById(R.id.pilihKategori2);
+        pilihKategori3 = findViewById(R.id.pilihKategori3);
+        pilihKategori4 = findViewById(R.id.pilihKategori4);
+        pilihKategori5 = findViewById(R.id.pilihKategori5);
 
         //input kolom data spinner
         etKolom1 = findViewById(R.id.input_laporan_kategori1);
@@ -98,12 +108,16 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
         //Button
         btnDariTanggalLaporan = findViewById(R.id.btn_pilihDariTanggalLaporan);
         btnSampaiTanggalLaporan = findViewById(R.id.btn_pilihSampaiTanggalLaporan);
-        btnPilihTanggalLapor = findViewById(R.id.btn_pilihTanggalLaporan);
+//        btnPilihTanggalLapor = findViewById(R.id.btn_pilihTanggalLaporan);
         sendLaporan = findViewById(R.id.btn_send_laporanBulanan);
 
         tambahKolom3.setVisibility(View.INVISIBLE);
         tambahKolom4.setVisibility(View.INVISIBLE);
         tambahKolom5.setVisibility(View.INVISIBLE);
+        pilihKategori2.setVisibility(View.INVISIBLE);
+        pilihKategori3.setVisibility(View.INVISIBLE);
+        pilihKategori4.setVisibility(View.INVISIBLE);
+        pilihKategori5.setVisibility(View.INVISIBLE);
         spinner2.setVisibility(View.INVISIBLE);
         spinner3.setVisibility(View.INVISIBLE);
         spinner4.setVisibility(View.INVISIBLE);
@@ -120,6 +134,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 spinner2.setVisibility(View.VISIBLE);
                 etKolom2.setVisibility(View.VISIBLE);
+                pilihKategori2.setVisibility(View.VISIBLE);
                 tambahKolom2.setVisibility(View.INVISIBLE);
                 tambahKolom3.setVisibility(View.VISIBLE);
             }
@@ -130,6 +145,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 spinner3.setVisibility(View.VISIBLE);
                 etKolom3.setVisibility(View.VISIBLE);
+                pilihKategori3.setVisibility(View.VISIBLE);
                 tambahKolom3.setVisibility(View.INVISIBLE);
                 tambahKolom4.setVisibility(View.VISIBLE);
             }
@@ -140,6 +156,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 spinner4.setVisibility(View.VISIBLE);
                 etKolom4.setVisibility(View.VISIBLE);
+                pilihKategori4.setVisibility(View.VISIBLE);
                 tambahKolom4.setVisibility(View.INVISIBLE);
                 tambahKolom5.setVisibility(View.VISIBLE);
             }
@@ -150,6 +167,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 spinner5.setVisibility(View.VISIBLE);
                 etKolom5.setVisibility(View.VISIBLE);
+                pilihKategori5.setVisibility(View.VISIBLE);
                 tambahKolom5.setVisibility(View.INVISIBLE);
             }
         });
@@ -201,26 +219,26 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
         });
 
 
-        btnPilihTanggalLapor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(LaporanBulananAdminActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        calendar.set(year,month,dayOfMonth);
-                        laporKirimTanggal.setText(simpleDateFormat.format(calendar.getTime()));
-                        tgl_pengajuanWeekly = calendar.getTime();
-
-
-
-                    }
-                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-                datePickerDialog.show();
-            }
-        });
+//        btnPilihTanggalLapor.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DatePickerDialog datePickerDialog = new DatePickerDialog(LaporanBulananAdminActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//
+//                        calendar.set(year,month,dayOfMonth);
+//                        laporKirimTanggal.setText(simpleDateFormat.format(calendar.getTime()));
+//                        tgl_pengajuanWeekly = calendar.getTime();
+//
+//
+//
+//                    }
+//                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+//                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+//                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+//                datePickerDialog.show();
+//            }
+//        });
 
 
         //ini send data
@@ -266,8 +284,7 @@ public class LaporanBulananAdminActivity extends AppCompatActivity {
                             kategoriLima,
                             etKolomLima,
                             tgl_pengajuanLaporanWeekly_DariDate.getTime(),
-                            tgl_pengajuanLaporanWeekly_SampaiDate.getTime(),
-                            tgl_pengajuanWeekly.getTime()
+                            tgl_pengajuanLaporanWeekly_SampaiDate.getTime()
 
                     );
 

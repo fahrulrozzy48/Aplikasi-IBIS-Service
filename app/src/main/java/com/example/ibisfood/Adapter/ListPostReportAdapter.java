@@ -29,7 +29,7 @@ public class ListPostReportAdapter extends RecyclerView.Adapter<ListPostReportAd
 
     Locale id = new Locale("in", "ID");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY HH:mm", id);
-    SimpleDateFormat simpleDateFormatDua = new SimpleDateFormat("dd/MM/YYYY", id);
+    SimpleDateFormat simpleDateFormatDua = new SimpleDateFormat("dd MMMM YYYY", id);
 
     public ListPostReportAdapter(Context context, List<PostReportFromAdminToManagerModel> mData) {
         this.context = context;

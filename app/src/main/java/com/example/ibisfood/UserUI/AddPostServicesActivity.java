@@ -65,15 +65,15 @@ import java.util.Locale;
 public class AddPostServicesActivity extends AppCompatActivity {
 
 
-//    EditText noRoomService,titleService, descService;
+    //    EditText noRoomService,titleService, descService;
     EditText titleService, descService;
     ImageView imageService;
-//    Date tgl_pengajuan_date, tgl_staff_job_date;
+    //    Date tgl_pengajuan_date, tgl_staff_job_date;
     TextView tanggalPost;
-//    Button btnPilihTanggalPosting;
+    //    Button btnPilihTanggalPosting;
     Calendar calendar = Calendar.getInstance();
-    Locale id = new Locale("in","ID");
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY",id);
+    Locale id = new Locale("in", "ID");
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY", id);
 
     Spinner spinner;
     ArrayList<String> arrayList = new ArrayList<>();
@@ -81,14 +81,14 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
     Button btnService;
     private static final int PReqCode = 2;
-    private static final int REQUESCODE = 2 ;
+    private static final int REQUESCODE = 2;
     private Uri pickedImgUri = null;
     FirebaseUser currentUser;
     FirebaseAuth mAuth;
     private static final int CAMERA_IMAGE_CODE = 200;
 
 
-//    Uri image_uri = null;
+    //    Uri image_uri = null;
 //    private static final int GALLERY_IMAGE_CODE = 100;
 //    private static final int CAMERA_IMAGE_CODE = 200;
     ProgressDialog pd;
@@ -104,11 +104,10 @@ public class AddPostServicesActivity extends AppCompatActivity {
 //        noRoomService = findViewById(R.id.no_room_service);
         titleService = findViewById(R.id.title_service);
         imageService = findViewById(R.id.image_service);
-        descService =  findViewById(R.id.description_service);
+        descService = findViewById(R.id.description_service);
         btnService = findViewById(R.id.btn_send_service);
 //        tanggalPost = findViewById(R.id.date_pilihTanggal);
 //        btnPilihTanggalPosting = findViewById(R.id.btn_pilihTanggal);
-
 
 
         //ini spinner
@@ -185,11 +184,9 @@ public class AddPostServicesActivity extends AppCompatActivity {
 // akhir versi 1
 
 
-    //versi 2
+        //versi 2
 
         setupImageClick();
-
-
 
 
         btnService.setOnClickListener(new View.OnClickListener() {
@@ -200,9 +197,9 @@ public class AddPostServicesActivity extends AppCompatActivity {
                 pd.show();
 
                 if (
-                        !titleService.getText().toString().isEmpty()
-                        && !descService.getText().toString().isEmpty()
-                        && imageService != null ) {
+                        !titleService.getText().toString().isEmpty() && !descService.getText().toString().isEmpty()
+                                && imageService != null
+                ) {
 
 
 //                    Bitmap bitmap = ((BitmapDrawable)imageService.getDrawable()).getBitmap();
@@ -223,43 +220,32 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                     String imageDownlaodLink = uri.toString();
 //                                    String no_room = noRoomService.getText().toString();
                                     String title = titleService.getText().toString();
-                                     String description = descService.getText().toString();
-                                     String kategori = postMessageModel.setpKategori(spinner.getSelectedItem().toString());
+                                    String description = descService.getText().toString();
+                                    String kategori = postMessageModel.setpKategori(spinner.getSelectedItem().toString());
 
-                                     String namaStaffJob = "";
-                                     String imageStaffJob = "";
-                                     String descJobStaffJob = "";
-                                     String statusStaffJob = "";
+                                    String namaStaffJob = "";
+                                    String imageStaffJob = "";
+                                    String descJobStaffJob = "";
+                                    String statusStaffJob = "";
 
-                                     
 
                                     // create post Object
 
                                     PostMessageModel post = new PostMessageModel(
-//                                            currentUser.getEmail(),
-//                                            title,
-//                                            description,
-//                                            imageDownlaodLink,
-//                                            no_room
                                             currentUser.getEmail(),
                                             title,
-                                            //spinner kategori
                                             kategori,
                                             description,
                                             imageDownlaodLink,
-//                                            no_room,
-//                                            tgl_pengajuan_date.getTime(),
                                             namaStaffJob,
                                             imageStaffJob,
                                             descJobStaffJob,
                                             statusStaffJob
-//                                            tgl_staff_job_date.getTime()
                                     );
 
 
                                     // Add post to firebase database
                                     addPost(post);
-
 
 
                                 }
@@ -272,7 +258,6 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                     showMessage(e.getMessage());
 
 
-
                                 }
                             });
 
@@ -281,9 +266,38 @@ public class AddPostServicesActivity extends AppCompatActivity {
                     });
 
 
-                }else {
+//                }
+//                else if ((!titleService.getText().toString().isEmpty() && !descService.getText().toString().isEmpty())
+//                        || imageService == null) {
+//
+//
+//                    String imageDownlaodLink = pickedImgUri.toString();
+//                    String title = titleService.getText().toString();
+//                    String description = descService.getText().toString();
+//                    String kategori = postMessageModel.setpKategori(spinner.getSelectedItem().toString());
+//
+//                    String namaStaffJob = "";
+//                    String imageStaffJob = "";
+//                    String descJobStaffJob = "";
+//                    String statusStaffJob = "";
+//
+//                    PostMessageModel post = new PostMessageModel(
+//                            currentUser.getEmail(),
+//                            title,
+//                            kategori,
+//                            description,
+//                            imageDownlaodLink,
+//                            namaStaffJob,
+//                            imageStaffJob,
+//                            descJobStaffJob,
+//                            statusStaffJob
+//                    );
+//
+//                    addPost(post);
+
+                } else {
                     pd.dismiss();
-                    showMessage("Please verify all input fields, Date and choose Post Image") ;
+                    showMessage("Please verify all input fields, Date and choose Post Image");
 
                 }
 
@@ -301,11 +315,11 @@ public class AddPostServicesActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 arrayList.clear();
-                for(DataSnapshot item: snapshot.getChildren()){
+                for (DataSnapshot item : snapshot.getChildren()) {
                     arrayList.add(item.child("nameKategori").getValue(String.class));
                 }
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(AddPostServicesActivity.this,R.layout.style_spinner,arrayList);
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(AddPostServicesActivity.this, R.layout.style_spinner, arrayList);
                 spinner.setAdapter(adapter);
             }
 
@@ -322,7 +336,6 @@ public class AddPostServicesActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("PostMessage").push();
 
 
-
         // get post unique ID and upadte post key
         String key = myRef.getKey();
         post.setPostKey(key);
@@ -335,14 +348,14 @@ public class AddPostServicesActivity extends AppCompatActivity {
             public void onSuccess(Void aVoid) {
                 pd.dismiss();
                 showMessage("Message Successfully");
-                startActivity(new Intent(AddPostServicesActivity.this,MainActivity.class));
+                startActivity(new Intent(AddPostServicesActivity.this, MainActivity.class));
             }
         });
     }
 
     private void showMessage(String message) {
 
-        Toast.makeText(AddPostServicesActivity.this,message,Toast.LENGTH_LONG).show();
+        Toast.makeText(AddPostServicesActivity.this, message, Toast.LENGTH_LONG).show();
 
     }
 
@@ -364,22 +377,22 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
         Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
-        startActivityForResult(galleryIntent,REQUESCODE);
+        startActivityForResult(galleryIntent, REQUESCODE);
     }
 
 
     private void imagePickDialog() {
-        String[] option = {"Camera","Gallery"};
+        String[] option = {"Camera", "Gallery"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
 
         builder.setItems(option, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (which == 0){
+                if (which == 0) {
                     cameraPick();
                 }
-                if (which == 1){
+                if (which == 1) {
                     openGallery();
                 }
             }
@@ -390,7 +403,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
     private void cameraPick() {
 
-        ContentValues contentValues= new ContentValues();
+        ContentValues contentValues = new ContentValues();
         contentValues.put(MediaStore.Images.Media.TITLE, "Temp No Room");
         contentValues.put(MediaStore.Images.Media.TITLE, "Temp Pick");
         contentValues.put(MediaStore.Images.Media.TITLE, "Temp Desc");
@@ -406,61 +419,51 @@ public class AddPostServicesActivity extends AppCompatActivity {
         if ((ContextCompat.checkSelfPermission(AddPostServicesActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) ||
                 (ContextCompat.checkSelfPermission(AddPostServicesActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) ||
+                        != PackageManager.PERMISSION_GRANTED) ||
                 (ContextCompat.checkSelfPermission(AddPostServicesActivity.this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED)) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(AddPostServicesActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
 
-                Toast.makeText(AddPostServicesActivity.this,"Please accept for required permission",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddPostServicesActivity.this, "Please accept for required permission", Toast.LENGTH_SHORT).show();
 
             } else if (ActivityCompat.shouldShowRequestPermissionRationale(AddPostServicesActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                Toast.makeText(AddPostServicesActivity.this,"Please accept for required permission",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddPostServicesActivity.this, "Please accept for required permission", Toast.LENGTH_SHORT).show();
 
             } else if (ActivityCompat.shouldShowRequestPermissionRationale(AddPostServicesActivity.this, Manifest.permission.CAMERA)) {
 
-                Toast.makeText(AddPostServicesActivity.this,"Please accept for required permission",Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddPostServicesActivity.this, "Please accept for required permission", Toast.LENGTH_SHORT).show();
 
-            }
-
-            else
-            {
+            } else {
                 ActivityCompat.requestPermissions(AddPostServicesActivity.this,
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA},
                         PReqCode);
             }
 
-        }
-        else
+        } else
 //            openGallery();
 
             imagePickDialog();
     }
 
 
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK && requestCode == REQUESCODE && data != null ) {
+        if (resultCode == RESULT_OK && requestCode == REQUESCODE && data != null) {
 
             // the user has successfully picked an image
             // we need to save its reference to a Uri variable
-            pickedImgUri = data.getData() ;
+            pickedImgUri = data.getData();
             imageService.setImageURI(pickedImgUri);
 
-        } else if ( requestCode == CAMERA_IMAGE_CODE){
+        } else if (requestCode == CAMERA_IMAGE_CODE) {
             imageService.setImageURI(pickedImgUri);
         }
 
 
     }
-
-
-
-
 
 
 // versi 1
