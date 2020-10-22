@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-
     >
 
     <item
 
         android:id="@+id/nav_message_client"
-        android:icon="@drawable/ic_purchase_order"
+        android:icon="@drawable/ic_baseline_message_24"
         android:title="Message" />
     <item
 
@@ -16,11 +15,11 @@
         android:title="Approval" />
     <item
         android:id="@+id/nav_feeds_admin"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_baseline_article_24"
         android:title="Feeds" />
     <item
         android:id="@+id/nav_menu_tools"
-        android:icon="@drawable/ic_baseline_business_center_24"
+        android:icon="@drawable/ic_baseline_tools"
         android:title="Tools"
         />
     <item

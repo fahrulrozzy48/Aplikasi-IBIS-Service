@@ -10,8 +10,13 @@
         android:icon="@drawable/ic_star_hotel"
         android:title="Beranda" />
     <item
+
+        android:id="@+id/nav_feeds_user"
+        android:icon="@drawable/ic_baseline_article_24"
+        android:title="Feeds" />
+    <item
         android:id="@+id/nav_menu"
-        android:icon="@drawable/ic_literature_filled"
+        android:icon="@drawable/ic_baseline_business_center_24"
         android:title="Layanan"
         />
     <item

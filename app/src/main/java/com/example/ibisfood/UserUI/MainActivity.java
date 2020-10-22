@@ -37,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             Fragment pilihFragment = null;
 
-            switch (menuItem.getItemId()){
+            switch (menuItem.getItemId()) {
                 case R.id.nav_home:
                     pilihFragment = new HomeFragment();
+                    break;
+                case R.id.nav_feeds_user:
+                    pilihFragment = new FeedsUserFragment();
                     break;
                 case R.id.nav_menu:
                     pilihFragment = new MenuFragment();
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
             return;
         } else {
-            Toast.makeText(getBaseContext(), "Please don't exit in application",    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Please don't exit in application", Toast.LENGTH_SHORT).show();
         }
         mBackPressed = System.currentTimeMillis();
     }
