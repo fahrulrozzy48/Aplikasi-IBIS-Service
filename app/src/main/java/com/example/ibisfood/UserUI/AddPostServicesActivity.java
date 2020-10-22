@@ -65,11 +65,12 @@ import java.util.Locale;
 public class AddPostServicesActivity extends AppCompatActivity {
 
 
-    EditText noRoomService,titleService, descService;
+//    EditText noRoomService,titleService, descService;
+    EditText titleService, descService;
     ImageView imageService;
-    Date tgl_pengajuan_date, tgl_staff_job_date;
+//    Date tgl_pengajuan_date, tgl_staff_job_date;
     TextView tanggalPost;
-    Button btnPilihTanggalPosting;
+//    Button btnPilihTanggalPosting;
     Calendar calendar = Calendar.getInstance();
     Locale id = new Locale("in","ID");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY",id);
@@ -100,13 +101,13 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
 
 //        permission();
-        noRoomService = findViewById(R.id.no_room_service);
+//        noRoomService = findViewById(R.id.no_room_service);
         titleService = findViewById(R.id.title_service);
         imageService = findViewById(R.id.image_service);
         descService =  findViewById(R.id.description_service);
         btnService = findViewById(R.id.btn_send_service);
-        tanggalPost = findViewById(R.id.date_pilihTanggal);
-        btnPilihTanggalPosting = findViewById(R.id.btn_pilihTanggal);
+//        tanggalPost = findViewById(R.id.date_pilihTanggal);
+//        btnPilihTanggalPosting = findViewById(R.id.btn_pilihTanggal);
 
 
 
@@ -125,26 +126,26 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
         //waktu
 
-        btnPilihTanggalPosting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatePickerDialog datePickerDialog = new DatePickerDialog(AddPostServicesActivity.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        calendar.set(year,month,dayOfMonth);
-                        tanggalPost.setText(simpleDateFormat.format(calendar.getTime()));
-                        tgl_pengajuan_date = calendar.getTime();
-
-
-
-                    }
-                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
-                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-                datePickerDialog.show();
-            }
-        });
+//        btnPilihTanggalPosting.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                DatePickerDialog datePickerDialog = new DatePickerDialog(AddPostServicesActivity.this, new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//
+//                        calendar.set(year,month,dayOfMonth);
+//                        tanggalPost.setText(simpleDateFormat.format(calendar.getTime()));
+//                        tgl_pengajuan_date = calendar.getTime();
+//
+//
+//
+//                    }
+//                }, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+//                datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+//                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+//                datePickerDialog.show();
+//            }
+//        });
 
 
 // versi 1
@@ -199,7 +200,6 @@ public class AddPostServicesActivity extends AppCompatActivity {
                 pd.show();
 
                 if (
-                        !noRoomService.getText().toString().isEmpty() &&
                         !titleService.getText().toString().isEmpty()
                         && !descService.getText().toString().isEmpty()
                         && imageService != null ) {
@@ -221,7 +221,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                     String imageDownlaodLink = uri.toString();
-                                    String no_room = noRoomService.getText().toString();
+//                                    String no_room = noRoomService.getText().toString();
                                     String title = titleService.getText().toString();
                                      String description = descService.getText().toString();
                                      String kategori = postMessageModel.setpKategori(spinner.getSelectedItem().toString());
@@ -247,8 +247,8 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                             kategori,
                                             description,
                                             imageDownlaodLink,
-                                            no_room,
-                                            tgl_pengajuan_date.getTime(),
+//                                            no_room,
+//                                            tgl_pengajuan_date.getTime(),
                                             namaStaffJob,
                                             imageStaffJob,
                                             descJobStaffJob,

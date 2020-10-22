@@ -43,7 +43,7 @@ public class ListJobListAdapter extends RecyclerView.Adapter<ListJobListAdapter.
     @Override
     public void onBindViewHolder(@NonNull ListJobListAdapter.MyHolder holder, int position) {
 
-        holder.postNoKamarClient.setText(mData.get(position).getpNoRoom());
+        holder.postEmailKamarClient.setText(mData.get(position).getuEmail());
         holder.postKategoriClient.setText(mData.get(position).getpKategori());
         holder.postStatusJob.setText(mData.get(position).getStaffStatusJob());
         holder.postTimeMessageClient.setText(simpleDateFormat.format(mData.get(position).getpTime()));
@@ -57,12 +57,12 @@ public class ListJobListAdapter extends RecyclerView.Adapter<ListJobListAdapter.
 
     public class MyHolder extends RecyclerView.ViewHolder {
 
-        TextView postNoKamarClient, postKategoriClient, postTimeMessageClient, postStatusJob;
+        TextView postEmailKamarClient, postKategoriClient, postTimeMessageClient, postStatusJob;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
 
-            postNoKamarClient = itemView.findViewById(R.id.row_kamar_staff);
+            postEmailKamarClient = itemView.findViewById(R.id.row_emailkamar_staff);
             postKategoriClient = itemView.findViewById(R.id.row_kategori_staff);
             postTimeMessageClient= itemView.findViewById(R.id.row_time_staff);
             postStatusJob = itemView.findViewById(R.id.row_status_pekerjaan_staff);
@@ -75,7 +75,7 @@ public class ListJobListAdapter extends RecyclerView.Adapter<ListJobListAdapter.
                     int position = getAdapterPosition();
 
                     postJobDetailActivity.putExtra("uEmail",mData.get(position).getuEmail());
-                    postJobDetailActivity.putExtra("pNoRoom",mData.get(position).getpNoRoom());
+//                    postJobDetailActivity.putExtra("pNoRoom",mData.get(position).getpNoRoom());
                     postJobDetailActivity.putExtra("pTitle",mData.get(position).getpTitle());
                     postJobDetailActivity.putExtra("pKategori",mData.get(position).getpKategori());
                     postJobDetailActivity.putExtra("pDescription",mData.get(position).getpDescription());

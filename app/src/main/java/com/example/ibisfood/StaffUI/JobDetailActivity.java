@@ -91,7 +91,7 @@ public class JobDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_job_detail);
 
 
-        detailJobNoKamar = findViewById(R.id.job_detail_no_kamar);
+//        detailJobNoKamar = findViewById(R.id.job_detail_no_kamar);
         detailJobEmailUser = findViewById(R.id.job_detail_email);
         detailJobKategori = findViewById(R.id.job_detail_kategori);
         detailJobImage = findViewById(R.id.job_detail_image);
@@ -123,8 +123,8 @@ public class JobDetailActivity extends AppCompatActivity {
         String postDescription = getIntent().getExtras().getString("pDescription");
         detailJobDescription.setText(postDescription);
 
-        String postNoRoom = getIntent().getExtras().getString("pNoRoom");
-        detailJobNoKamar.setText(postNoRoom);
+//        String postNoRoom = getIntent().getExtras().getString("pNoRoom");
+//        detailJobNoKamar.setText(postNoRoom);
 
         // get post id
         PostKey = getIntent().getExtras().getString("postKey");
@@ -201,14 +201,14 @@ public class JobDetailActivity extends AppCompatActivity {
                                     String imageDownlaodLink = uri.toString();
                                     jobDesc = jobStaffDescription.getText().toString();
                                     String imageDownlaod = getIntent().getExtras().getString("pImage");
-                                    String no_room = detailJobNoKamar.getText().toString();
+//                                    String no_room = detailJobNoKamar.getText().toString();
                                     String title = detailJobTitle.getText().toString();
                                     String description = detailJobDescription.getText().toString();
                                     String kategori = detailJobKategori.getText().toString();
                                     String email = detailJobEmailUser.getText().toString();
 
                                     PostMessageModel postUpdateJob = new PostMessageModel();
-                                    postUpdateJob.setpNoRoom(no_room);
+//                                    postUpdateJob.setpNoRoom(no_room);
                                     postUpdateJob.setpTitle(title);
                                     postUpdateJob.setuEmail(email);
                                     postUpdateJob.setpTime(tgl_pengajuan_date.getTime());

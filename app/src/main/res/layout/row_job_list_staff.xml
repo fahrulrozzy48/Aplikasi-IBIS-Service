@@ -13,23 +13,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="Kamar "
-            android:textSize="17sp"
-            android:fontFamily="@font/abeezee"
-            android:textColor="@color/colorAccent"
-            />
-        <TextView
-            android:id="@+id/row_kamar_staff"
+            android:id="@+id/row_emailkamar_staff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
-            android:text="013"
+            android:text="kamar@ibis.co.id"
+
+            android:layout_marginLeft="10dp"
             android:textSize="17sp"
             android:fontFamily="@font/abeezee"
             android:textColor="@color/colorAccent"

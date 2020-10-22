@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 public class MessageDetailActivity extends AppCompatActivity {
 
     ImageView detailImage;
-    TextView detailEmail, detailDescription, detailNoKamar, detailTime, detailTitle;
+    TextView detailEmail, detailDescription, detailTime, detailTitle;
     TextView detailKategori;
     String PostKey;
 
@@ -42,7 +42,7 @@ public class MessageDetailActivity extends AppCompatActivity {
 
 
         detailEmail = findViewById(R.id.detail_email);
-        detailNoKamar = findViewById(R.id.detail_no_kamar);
+//        detailNoKamar = findViewById(R.id.detail_no_kamar);
         detailDescription = findViewById(R.id.detail_description);
         detailTitle = findViewById(R.id.detail_title);
         detailTime = findViewById(R.id.detail_time);
@@ -73,8 +73,8 @@ public class MessageDetailActivity extends AppCompatActivity {
         String postDescription = getIntent().getExtras().getString("pDescription");
         detailDescription.setText(postDescription);
 
-        String postNoRoom = getIntent().getExtras().getString("pNoRoom");
-        detailNoKamar.setText(postNoRoom);
+//        String postNoRoom = getIntent().getExtras().getString("pNoRoom");
+//        detailNoKamar.setText(postNoRoom);
 
         // get post id
         PostKey = getIntent().getExtras().getString("postKey");

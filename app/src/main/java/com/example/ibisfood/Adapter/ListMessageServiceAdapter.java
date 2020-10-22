@@ -25,7 +25,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageServiceAdapter.MyHolder> implements View.OnCreateContextMenuListener {
+public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageServiceAdapter.MyHolder>  {
 
 
     Context context;
@@ -34,8 +34,7 @@ public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageS
     Locale id = new Locale("in","ID");
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/YYYY HH:mm",id);
 
-    private OnItemClickListner listener;
-    private String messageDate;
+
 
 
     public ListMessageServiceAdapter(Context context, List<PostMessageModel> mData) {
@@ -104,7 +103,7 @@ public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageS
                     int position = getAdapterPosition();
 
                     postDetailMessageActivity.putExtra("uEmail",mData.get(position).getuEmail());
-                    postDetailMessageActivity.putExtra("pNoRoom",mData.get(position).getpNoRoom());
+//                    postDetailMessageActivity.putExtra("pNoRoom",mData.get(position).getpNoRoom());
                     postDetailMessageActivity.putExtra("pTitle",mData.get(position).getpTitle());
                     postDetailMessageActivity.putExtra("pKategori",mData.get(position).getpKategori());
                     postDetailMessageActivity.putExtra("pDescription",mData.get(position).getpDescription());
@@ -146,16 +145,6 @@ public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageS
         void onItemClick(DocumentSnapshot documentSnapshot, int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListner listener){
-        this.listener = listener;
-    }
-
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        menu.setHeaderTitle("Select Option");
-
-//        menu.add(0,0,getAdapterPosition(),"Update");
-    }
 
 
 

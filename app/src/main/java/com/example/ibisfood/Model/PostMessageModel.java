@@ -1,5 +1,7 @@
 package com.example.ibisfood.Model;
 
+import com.google.firebase.database.ServerValue;
+
 public class PostMessageModel {
 
     private String uEmail;
@@ -7,9 +9,8 @@ public class PostMessageModel {
     private String pKategori;
     private String pDescription;
     private String pImage;
-    private String pNoRoom;
     private String postKey;
-    private  long pTime;
+    private  Object pTime;
 
     //staff masuk
     private String staffEmailJob;
@@ -24,14 +25,13 @@ public class PostMessageModel {
     public PostMessageModel() {
     }
 
-    public PostMessageModel(String uEmail, String pTitle, String pKategori, String pDescription, String pImage, String pNoRoom, long pTime, String staffEmailJob, String staffImageJob, String staffDescriptionJob, String staffStatusJob) {
+    public PostMessageModel(String uEmail, String pTitle, String pKategori, String pDescription, String pImage, String staffEmailJob, String staffImageJob, String staffDescriptionJob, String staffStatusJob) {
         this.uEmail = uEmail;
         this.pTitle = pTitle;
         this.pKategori = pKategori;
         this.pDescription = pDescription;
         this.pImage = pImage;
-        this.pNoRoom = pNoRoom;
-        this.pTime = pTime;
+        this.pTime = ServerValue.TIMESTAMP;
         this.staffEmailJob = staffEmailJob;
         this.staffImageJob = staffImageJob;
         this.staffDescriptionJob = staffDescriptionJob;
@@ -113,13 +113,7 @@ public class PostMessageModel {
         this.pImage = pImage;
     }
 
-    public String getpNoRoom() {
-        return pNoRoom;
-    }
 
-    public void setpNoRoom(String pNoRoom) {
-        this.pNoRoom = pNoRoom;
-    }
 
     public String getPostKey() {
         return postKey;
@@ -129,11 +123,11 @@ public class PostMessageModel {
         this.postKey = postKey;
     }
 
-    public long getpTime() {
+    public Object getpTime() {
         return pTime;
     }
 
-    public void setpTime(long pTime) {
+    public void setpTime(Object pTime) {
         this.pTime = pTime;
     }
 

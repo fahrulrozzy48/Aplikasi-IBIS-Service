@@ -68,6 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dari         : "
+                    android:textColor="#000"
                     android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
                     android:textStyle="bold"
@@ -90,37 +91,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="10dp"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kamar     : "
-                    android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    />
 
-                <TextView
-                    android:id="@+id/job_detail_no_kamar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="013"
-                    android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorAccent"
-                    />
-
-
-            </LinearLayout>
 
 
             <!--            Spinner-->
@@ -137,6 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kategori  : "
+                    android:textColor="#000"
                     android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
                     android:textStyle="bold"
@@ -182,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="HAHAHAHA "
+                android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginRight="10dp"
@@ -196,8 +169,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:layout_marginRight="10dp"
+                android:textColor="#000"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/abeezee"
                 android:layout_marginBottom="20dp"
@@ -230,6 +204,7 @@
                     android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
                     android:textStyle="bold"
+                    android:textColor="#000"
                     />
 
                 <TextView
@@ -261,6 +236,7 @@
                     android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
                     android:textStyle="bold"
+                    android:textColor="#000"
                     />
 
                 <TextView
@@ -309,7 +285,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:fontFamily="@font/abeezee"
@@ -404,14 +380,15 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:padding="10dp"
+                android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:gravity="start"
                 android:inputType="textCapSentences|textMultiLine"
                 android:hint="Write a description of problem services"
                 android:background="@drawable/bg_round3"
-                android:backgroundTint="#7C817E7E"
-                android:textColor="#555252"
+                android:backgroundTint="#7CCCCBCB"
+                android:textColor="#000"
                 />
 
 

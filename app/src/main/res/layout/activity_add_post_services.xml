@@ -14,41 +14,170 @@
         android:background="@drawable/bg_toolbar"
 
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Services"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/abeezee"
-            />
+            android:text="Services"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar_service"
-        >
+        android:layout_below="@id/toolbar_service">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <EditText
-            android:id="@+id/no_room_service"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:hint="No Room"
-            android:inputType="number"
-            android:fontFamily="@font/abeezee"
-            android:textColor="#555252"
-            android:textSize="17dp"
-            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="15dp"
+                android:gravity="center"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:textColor="@color/colorAccent"
+                    android:text="Detail Informasi"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/abeezee"-->
+<!--                    android:text="Berapa nomor kamar anda?"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/no_room_service"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:fontFamily="@font/abeezee"-->
+<!--                    android:hint="No Room"-->
+<!--                    android:inputType="number"-->
+<!--                    android:textColor="#555252"-->
+<!--                    android:textSize="15dp" />-->
+
+<!--            </LinearLayout>-->
+
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/abeezee"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="Pilih tanggal pengajuan pelayanan"-->
+<!--                android:textColor="#000"-->
+<!--                android:textSize="15sp" />-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/date_pilihTanggal"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:fontFamily="@font/abeezee"-->
+<!--                    android:hint="Pilih Tanggal"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btn_pilihTanggal"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/bg_round"-->
+<!--                    android:backgroundTint="@color/colorAccent"-->
+<!--                    android:fontFamily="@font/abeezee"-->
+<!--                    android:text="Date"-->
+<!--                    android:textColor="@color/colorWhite"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold" />-->
+
+
+<!--            </LinearLayout>-->
+
+
+
+            <!--        Spinner -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pilih kategori pelayanan?"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Spinner
+                        android:id="@+id/spinner_kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"/>
+
+                </LinearLayout>
+            </LinearLayout>
 
 
 
@@ -56,147 +185,108 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
+                android:layout_margin="15dp"
+                android:gravity="center"
                 >
 
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent" />
 
                 <TextView
-                    android:id="@+id/date_pilihTanggal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:hint="Pilih Tanggal"
-                    android:textSize="17sp"
                     android:fontFamily="@font/abeezee"
+                    android:textColor="@color/colorAccent"
+                    android:text="Detail Layanan"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
                     />
 
-                <Button
-                    android:id="@+id/btn_pilihTanggal"
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="30dp"
-                    android:layout_height="35dp"
+                <View
+                    android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="Date"
-                    android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/bg_round"
-                    android:backgroundTint="@color/colorAccent"
-                    android:textColor="@color/colorWhite"
-                    android:fontFamily="@font/abeezee"
-                    />
-
+                    android:layout_height="1dp"
+                    android:background="@color/colorAccent" />
 
             </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#8A8A8A"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            />
 
-<!--        Spinner -->
-
-        <LinearLayout
-            android:id="@+id/layoutSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_margin="5dp"
-            >
-
-
-
-
-            <Spinner
-                android:id="@+id/spinner_kategori"
+            <EditText
+                android:id="@+id/title_service"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:hint="Judul Pelayanan"
+                android:textColor="#292828"
+                android:textSize="15dp" />
+
+
+            <EditText
+                android:id="@+id/description_service"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CC6C4C4"
+                android:fontFamily="@font/abeezee"
+                android:gravity="start"
+                android:hint="Deskripsikan pelayanan dengan detail"
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textColor="#292828" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Tambahkan gambar/foto"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_Panorama"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:layout_height="220dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/image_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rsz_upload"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:id="@+id/btn_send_service"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_round"
+                android:fontFamily="@font/abeezee"
+                android:text="Send"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:textStyle="bold"
+
                 />
 
+
         </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#8A8A8A"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            />
-
-
-        <EditText
-            android:id="@+id/title_service"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Title"
-            android:fontFamily="@font/abeezee"
-            android:textColor="#555252"
-            android:textSize="17dp"
-            />
-
-
-
-        <EditText
-            android:id="@+id/description_service"
-            android:fontFamily="@font/abeezee"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:gravity="start"
-            android:inputType="textCapSentences|textMultiLine"
-            android:hint="Write a description of your services"
-            android:background="@drawable/bg_round3"
-            android:backgroundTint="#7C817E7E"
-            android:textColor="#555252"
-            />
-
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_Panorama"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            app:cardCornerRadius="10dp">
-
-        <ImageView
-            android:id="@+id/image_service"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/rsz_upload"
-            android:layout_marginBottom="10dp"
-            />
-        </androidx.cardview.widget.CardView>
-
-
-
-        <Button
-            android:id="@+id/btn_send_service"
-            android:layout_marginTop="10dp"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:background="@drawable/bg_round"
-            android:text="Send"
-            android:textColor="@color/colorWhite"
-            android:fontFamily="@font/abeezee"
-            android:textSize="15sp"
-            android:textStyle="bold"
-
-            />
-
-
-
-    </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>
