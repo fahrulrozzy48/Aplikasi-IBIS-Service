@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/abeezee"
-            android:text="Services"
+            android:text="@string/task_pelayanan"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abeezee"
                     android:textColor="@color/colorAccent"
-                    android:text="Detail Informasi"
+                    android:text="@string/detail_informasi"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="3dp"
                     />
@@ -157,7 +157,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abeezee"
-                    android:text="Pilih kategori pelayanan?"
+                    android:text="@string/pilih_kategori_pelayanan"
                     android:textColor="#000"
                     android:textSize="15sp" />
 
@@ -200,7 +200,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/abeezee"
                     android:textColor="@color/colorAccent"
-                    android:text="Detail Layanan"
+                    android:text="@string/detail_layanan"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="3dp"
                     />
@@ -221,7 +221,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
-                android:hint="Judul Pelayanan"
+                android:hint="@string/judul_pelayanan"
                 android:textColor="#292828"
                 android:textSize="15dp" />
 
@@ -236,7 +236,7 @@
                 android:backgroundTint="#7CC6C4C4"
                 android:fontFamily="@font/abeezee"
                 android:gravity="start"
-                android:hint="Deskripsikan pelayanan dengan detail"
+                android:hint="@string/deskripsi_pelayanan"
                 android:inputType="textCapSentences|textMultiLine"
                 android:padding="10dp"
                 android:textSize="15sp"
@@ -248,7 +248,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abeezee"
                 android:gravity="center"
-                android:text="Tambahkan gambar/foto"
+                android:text="@string/tambah_foto_pelayanan"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
@@ -277,8 +277,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bg_round"
+                android:textAllCaps="false"
                 android:fontFamily="@font/abeezee"
-                android:text="Send"
+                android:text="@string/kirim"
                 android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 android:textStyle="bold"

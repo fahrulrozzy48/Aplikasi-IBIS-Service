@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IBIS</string>
+    <string name="title_activity_home_user">HomeUserActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    // BAHASA INDONESIA
+
+    //Signin
+    <string name="email">Email</string>
+    <string name="kata_sandi">Password</string>
+    <string name="sudah_terdaftar">Input data has been registered</string>
+    <string name="login">Login</string>
+
+
+    //Signup
+    <string name="nama_pengguna">Username</string>
+    <string name="user_level">User Level :</string>
+    <string name="manajer">Manager</string>
+    <string name="admin">Admin</string>
+    <string name="staff">Staff</string>
+    <string name="kamar">Room</string>
+    <string name="register">Register</string>
+
+
+
+
+    //@@@ USER LEVEL BAHASA
+    //## User
+    //# home fragment user
+    <string name="selamat_datang">Welcome,</string>
+
+    //# menu fragment user
+    <string name="layanan">Services</string>
+    <string name="room_tour">ROOM TOUR</string>
+    <string name="pelayanan">SERVICE</string>
+
+    //# status fragment user
+    <string name="fasilitas">Facility</string>
+    <string name="free_wifi">Free Wifi</string>
+    <string name="dua_tempat_tidur">Two beds</string>
+    <string name="ac">AC</string>
+    <string name="bebas_rokok">Non-Smoking</string>
+    <string name="tv">TV</string>
+    <string name="shower">Shower</string>
+    <string name="keluar">Logout</string>
+    <string name="pengaturan">Setting</string>
+    <string name="gantibahasa">Change Language</string>
+
+    // room tour user
+    <string name="resepsionis">Receptionist</string>
+    <string name="lobby">Lobby</string>
+    <string name="kamar_tipe_a">Room Type A</string>
+    <string name="kamar_tipe_b">Room Type B</string>
+    <string name="kamar_mandi">Bathroom</string>
+
+    //pelayanan
+    <string name="task_pelayanan">Service</string>
+    <string name="detail_informasi">Detail Information</string>
+    <string name="detail_layanan">Detail Service</string>
+    <string name="pilih_kategori_pelayanan">Select service category?</string>
+    <string name="judul_pelayanan">Title service</string>
+    <string name="deskripsi_pelayanan">Describe service in detail</string>
+    <string name="tambah_foto_pelayanan">Add Picture/Photo</string>
+    <string name="kirim">Send</string>
+</resources>

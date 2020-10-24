@@ -14,15 +14,47 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/bg_toolbar"
         >
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Message Client Hotel"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark"
-            android:fontFamily="@font/abeezee"
-            />
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Message Client Hotel"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/abeezee"
+                />
+
+            <TextView
+                android:id="@+id/data_count_messageService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="15sp"
+                android:layout_marginRight="3dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/abeezee"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textSize="15sp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/abeezee"
+                />
+        </LinearLayout>
+
+
 
     </androidx.appcompat.widget.Toolbar>
 

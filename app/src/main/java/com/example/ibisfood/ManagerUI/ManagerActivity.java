@@ -68,7 +68,7 @@ public class ManagerActivity extends AppCompatActivity {
             super.onBackPressed();
             return;
         } else {
-            Toast.makeText(getBaseContext(), "Please don't exit in application",    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Please click back again to exit",    Toast.LENGTH_SHORT).show();
         }
         mBackPressed = System.currentTimeMillis();
     }

@@ -59,6 +59,10 @@ public class DataServiceFragment extends Fragment {
     Date date_maksimal;
 
 
+    TextView countMessage;
+    int sum;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -95,6 +99,8 @@ public class DataServiceFragment extends Fragment {
 
 
 //        loadPostMessage();
+
+        countMessage = rootView.findViewById(R.id.data_count_messageService);
 
         btnDariTanggal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -217,6 +223,9 @@ public class DataServiceFragment extends Fragment {
 
             PostMessageModel post = ds.getValue(PostMessageModel.class);
             postMessageModelList.add(post);
+
+            sum = (int) snapshot.getChildrenCount();
+            countMessage.setText(Integer.toString(sum));
 
         }
 

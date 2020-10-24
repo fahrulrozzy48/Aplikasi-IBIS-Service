@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">IBIS</string>
     <string name="title_activity_home_user">HomeUserActivity</string>
@@ -62,6 +63,4 @@
     <string name="deskripsi_pelayanan">Deskripsikan pelayanan dengan detail</string>
     <string name="tambah_foto_pelayanan">Tambahkan Gambar/Foto</string>
     <string name="kirim">Kirim</string>
-
-
 </resources>
