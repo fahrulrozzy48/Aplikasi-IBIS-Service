@@ -15,15 +15,15 @@
         android:background="@drawable/bg_toolbar"
 
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Category Management"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/abeezee"
-            />
+            android:text="Category Management"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -32,10 +32,9 @@
         android:id="@+id/linear_cekSPinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/toolbar_menu"
-        android:padding="10dp"
-        >
+        android:orientation="vertical"
+        android:padding="10dp">
 
 
         <EditText
@@ -61,36 +60,71 @@
             android:fontFamily="@font/abeezee"
             android:text="Simpan"
             android:textColor="@color/colorWhite"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
 
         <View
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/colorPrimaryDark"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark" />
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Ketegori : "
+                android:fontFamily="@font/abeezee"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
 
             <Spinner
                 android:id="@+id/spinner_kategoriManajemen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:autofillHints="Pilih Ketgori"/>
+        </LinearLayout>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List Kategori"
+            android:textSize="17sp"
+            android:fontFamily="@font/abeezee"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:textColor="#000"
+            />
 
-
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_kategori_crud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_item_kategori_managemen"
+            />
 
 
     </LinearLayout>
-
-
-
-
 
 
 </RelativeLayout>

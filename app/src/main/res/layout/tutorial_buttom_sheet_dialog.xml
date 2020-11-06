@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:backgroundTint="@color/colorWhite"
+    android:padding="20sp"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ibis_logo_2012"
+        android:scaleType="centerCrop"
+        android:layout_margin="50sp"
+        android:layout_gravity="center"
+        />
+
+
+    <Button
+        android:id="@+id/btn_tutorial1_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round"
+        android:text="Tutorial Pemesanan Service"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/abeezee"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+</LinearLayout>

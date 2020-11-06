@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="200dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:backgroundTint="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="10sp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Tutorial Pemesanan Pelayanan"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Pilih Menu Pelayanan"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Pilih Kategori Pelayanan yang Akan Dipesan"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Tuliskan Judul Pemesanan"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Tuliskan Deskripsi Pemesanan Dengan Detail"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Masukkan Gambar/Foto"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/service_tahap6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/abeezee"
+            android:text="Pesan Terkirim Dan Tunggulah Service Akan Datang Melayani Anda"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</ScrollView>

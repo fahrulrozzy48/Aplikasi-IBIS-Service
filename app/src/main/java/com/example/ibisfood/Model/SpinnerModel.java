@@ -1,8 +1,8 @@
 package com.example.ibisfood.Model;
 
 public class SpinnerModel {
-    String nameKategori;
-    private String postKey;
+    private String nameKategori;
+    private String key;
 
     public SpinnerModel() {
     }
@@ -19,11 +19,11 @@ public class SpinnerModel {
         this.nameKategori = nameKategori;
     }
 
-    public String getPostKey() {
-        return postKey;
+    public String getKey() {
+        return key;
     }
 
-    public void setPostKey(String postKey) {
-        this.postKey = postKey;
+    public void setKey(String key) {
+        this.key = key;
     }
 }
