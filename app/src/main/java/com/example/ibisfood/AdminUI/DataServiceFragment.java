@@ -16,12 +16,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ibisfood.Adapter.ListMessageServiceAdapter;
 import com.example.ibisfood.Model.PostMessageModel;
 import com.example.ibisfood.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -57,6 +60,10 @@ public class DataServiceFragment extends Fragment {
     Context mContext;
     Date date_minimal;
     Date date_maksimal;
+
+
+    ShimmerFrameLayout shimmerFrameLayout;
+    LinearLayout shimmerLayout;
 
 
     TextView countMessage;
@@ -101,6 +108,12 @@ public class DataServiceFragment extends Fragment {
 //        loadPostMessage();
 
         countMessage = rootView.findViewById(R.id.data_count_messageService);
+
+
+
+        //shimmer
+        shimmerFrameLayout = rootView.findViewById(R.id.shimmer_view_container_data_message_admin);
+        shimmerLayout = rootView.findViewById(R.id.shimmer_layout_data_message_admin);
 
         btnDariTanggal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,9 +244,24 @@ public class DataServiceFragment extends Fragment {
 
         posAdapter = new ListMessageServiceAdapter(mContext,postMessageModelList);
         recyclerView.setAdapter(posAdapter);
+        shimmerFrameLayout.stopShimmer();
+        shimmerLayout.setVisibility(View.GONE);
     }
 
-//    @Override
+    @Override
+    public void onPause() {
+        shimmerFrameLayout.stopShimmer();
+        super.onPause();
+
+    }
+
+    @Override
+    public void onResume() {
+        shimmerFrameLayout.startShimmer();
+        super.onResume();
+    }
+
+    //    @Override
 //    public void onStart() {
 //        super.onStart();
 //

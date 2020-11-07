@@ -79,12 +79,20 @@ public class HomeFragment extends Fragment {
         view = getLayoutInflater().inflate(R.layout.tutorial_buttom_sheet_dialog,null);
         viewDua = getLayoutInflater().inflate(R.layout.tutorial_service_bottom_sheet_dialog, null);
 
+        if (view.getParent() != null){
+            ((ViewGroup)view.getParent()).removeView(view);
+        }
+        if (viewDua.getParent() != null){
+            ((ViewGroup)viewDua.getParent()).removeView(viewDua);
+        }
+
         webview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), WebviewIbisHotelActivity.class));
             }
         });
+
 
 
         btnTutorial.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +107,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void showBottomDialog() {
+
+        if (view.getParent() != null){
+            ((ViewGroup)view.getParent()).removeView(view);
+        }
 
 
         if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
@@ -171,13 +183,10 @@ public class HomeFragment extends Fragment {
 
         sheetDialog = new BottomSheetDialog(getContext());
         sheetDialog.setContentView(view);
-//        if () {
-//        Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-////            sheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         sheetDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         sheetDialog.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
         sheetDialog.getWindow().getAttributes().gravity = Gravity.BOTTOM;
-//        }
+
 
         sheetDialog.show();
         sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
