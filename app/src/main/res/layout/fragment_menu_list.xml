@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminUI.MenuListFragment"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".AdminUI.MenuListFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_menu"
@@ -14,15 +14,15 @@
         android:background="@drawable/bg_toolbar"
 
         >
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tools"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark"
             android:fontFamily="@font/abeezee"
-            />
+            android:text="Tools"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -30,159 +30,139 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar_menu"
-        >
+        android:layout_below="@id/toolbar_menu">
 
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_RequestManager"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_margin="15dp"
-            app:cardCornerRadius="7dp"
-            app:cardElevation="7dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
-
-            <ImageView
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_RequestManager"
                 android:layout_width="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_height="200dp"
-                android:background="@drawable/roomtour"
-                />
+                android:layout_height="220dp"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
 
-            <TextView
-                android:layout_marginBottom="5dp"
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/menu_permission2"
+                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="PERMISSION REQUEST"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_LaporanMingguan"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="PERMISSION REQUEST"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_gravity="bottom"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"
-                />
+                android:layout_height="220dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
 
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/menu_report"
+                    android:scaleType="centerCrop" />
 
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_LaporanMingguan"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-        app:cardCornerRadius="7dp"
-        app:cardElevation="7dp">
-
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:scaleType="centerCrop"
-            android:layout_height="200dp"
-            android:background="@drawable/roomtour"
-            />
-
-        <TextView
-            android:layout_marginBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WEEKLY REPORT"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:textSize="20dp"
-            android:textColor="@color/colorAccent"
-            />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="WEEKLY REPORT"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
 
+            </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_Register"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            app:cardCornerRadius="7dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            app:cardElevation="7dp">
-
-
-
-            <ImageView
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_Register"
                 android:layout_width="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_height="200dp"
-                android:background="@drawable/roomtour"
-                />
+                android:layout_height="220dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
 
-            <TextView
-                android:layout_marginBottom="5dp"
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/menu_register"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="ACCOUNT MANAGEMENT"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_SpinnerKategori"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ACCOUNT MANAGEMENT"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_gravity="bottom"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"
-                />
+                android:layout_height="220dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
 
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/menu_category"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="CATEGORY MANAGEMENT"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
 
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView_SpinnerKategori"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            app:cardCornerRadius="7dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            app:cardElevation="7dp">
-
-
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:scaleType="centerCrop"
-                android:layout_height="200dp"
-                android:background="@drawable/roomtour"
-                />
-
-            <TextView
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CATEGORY MANAGEMENT"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_gravity="bottom"
-                android:textSize="20dp"
-                android:textColor="@color/colorAccent"
-                />
-
-
-
-
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
 
     </ScrollView>
 

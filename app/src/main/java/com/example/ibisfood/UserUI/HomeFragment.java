@@ -43,10 +43,12 @@ public class HomeFragment extends Fragment {
 
     CardView btnTutorial;
     BottomSheetBehavior sheetBehavior, sheetBehavior2;
-    BottomSheetDialog sheetDialog;
-    View bottom_sheet;
+    BottomSheetDialog sheetDialog, sheetDialog2;
+    View bottom_sheet, bottom_sheet2;
 
     CardView webview;
+
+    private View view,viewDua;
 
     @Nullable
     @Override
@@ -63,6 +65,7 @@ public class HomeFragment extends Fragment {
 
         btnTutorial = rootView.findViewById(R.id.btn_tutorial_pengguna);
         bottom_sheet = rootView.findViewById(R.id.bottom_sheet);
+        bottom_sheet2 = rootView.findViewById(R.id.bottom_sheet2);
         sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
         sheetBehavior2 = BottomSheetBehavior.from(bottom_sheet);
 
@@ -71,6 +74,10 @@ public class HomeFragment extends Fragment {
         currentUser = mAuth.getCurrentUser();
 
         identitas.setText(currentUser.getEmail());
+
+
+        view = getLayoutInflater().inflate(R.layout.tutorial_buttom_sheet_dialog,null);
+        viewDua = getLayoutInflater().inflate(R.layout.tutorial_service_bottom_sheet_dialog, null);
 
         webview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,7 +99,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void showBottomDialog() {
-        View view = getLayoutInflater().inflate(R.layout.tutorial_buttom_sheet_dialog, null);
+
 
         if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
             sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
@@ -101,24 +108,62 @@ public class HomeFragment extends Fragment {
         (view.findViewById(R.id.btn_tutorial1_service)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View viewDua = getLayoutInflater().inflate(R.layout.tutorial_service_bottom_sheet_dialog, null);
+
+                if (viewDua.getParent() != null){
+                    ((ViewGroup)viewDua.getParent()).removeView(viewDua);
+                }
+
                 if (sheetBehavior2.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-//                    sheetBehavior2.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    sheetBehavior2.setState(BottomSheetBehavior.STATE_COLLAPSED);
                     sheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
                 }
 
-                sheetDialog = new BottomSheetDialog(getContext());
-                sheetDialog.setContentView(viewDua);
+                sheetDialog2 = new BottomSheetDialog(getContext());
+                sheetDialog2.setContentView(viewDua);
 
-                sheetDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                sheetDialog.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
+                sheetDialog2.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                sheetDialog2.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
 
 
-                sheetDialog.show();
-                sheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                sheetDialog2.show();
+                sheetDialog.dismiss();
+                sheetDialog2.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
-                        sheetDialog = null;
+                        sheetDialog2 = null;
+                    }
+                });
+
+
+                (viewDua.findViewById(R.id.tutorial_service_btn_back)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if (view.getParent() != null){
+                            ((ViewGroup)view.getParent()).removeView(view);
+                        }
+
+                        if (sheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                            sheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                        }
+
+                        sheetDialog = new BottomSheetDialog(getContext());
+
+                        sheetDialog.setContentView(view);
+
+                        sheetDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                        sheetDialog.getWindow().setLayout(Toolbar.LayoutParams.MATCH_PARENT, Toolbar.LayoutParams.WRAP_CONTENT);
+                        sheetDialog.getWindow().getAttributes().gravity = Gravity.BOTTOM;
+
+                        sheetDialog.show();
+                        sheetDialog2.dismiss();
+                    }
+                });
+
+                (viewDua.findViewById(R.id.tutorial_service_btn_keluar)).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        sheetDialog2.dismiss();
                     }
                 });
             }
