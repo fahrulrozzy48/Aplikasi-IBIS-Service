@@ -9,11 +9,6 @@
         android:icon="@drawable/ic_baseline_message_24"
         android:title="Message" />
     <item
-
-        android:id="@+id/nav_answer_manager"
-        android:icon="@drawable/ic_baseline_requestblack"
-        android:title="Approval" />
-    <item
         android:id="@+id/nav_feeds_admin"
         android:icon="@drawable/ic_baseline_article_24"
         android:title="Feeds" />

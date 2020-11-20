@@ -89,31 +89,6 @@
                 android:orientation="horizontal">
 
 
-                <!--            <TextView-->
-                <!--                android:id="@+id/laporan_dariTanggal"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:hint="Laporan Dari Tanggal"-->
-                <!--                android:layout_weight="1"-->
-                <!--                android:textSize="17sp"-->
-                <!--                android:fontFamily="@font/abeezee"-->
-                <!--                />-->
-
-                <!--            <Button-->
-                <!--                android:id="@+id/btn_pilihDariTanggalLaporan"-->
-                <!--                android:layout_marginLeft="5dp"-->
-                <!--                android:layout_width="wrap_content"-->
-                <!--                android:layout_height="35dp"-->
-                <!--                android:text="Pilih Tanggal"-->
-                <!--                android:textAllCaps="false"-->
-                <!--                android:textSize="12sp"-->
-                <!--                android:textStyle="bold"-->
-                <!--                android:background="@drawable/bg_round"-->
-                <!--                android:backgroundTint="@color/colorAccent"-->
-                <!--                android:textColor="@color/colorWhite"-->
-                <!--                android:fontFamily="@font/abeezee"-->
-                <!--                />-->
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/btn_pilihDariTanggalLaporan"
                     android:layout_width="100dp"
@@ -204,92 +179,6 @@
             </LinearLayout>
 
 
-            <!--        <LinearLayout-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:orientation="horizontal"-->
-            <!--            android:layout_gravity="center"-->
-            <!--            android:layout_margin="5dp"-->
-            <!--            >-->
-
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/laporan_sampaiTanggal"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_weight="1"-->
-            <!--                android:hint="Laporan Sampai Tanggal"-->
-            <!--                android:textSize="17sp"-->
-            <!--                android:fontFamily="@font/abeezee"-->
-            <!--                />-->
-
-            <!--            <Button-->
-            <!--                android:id="@+id/btn_pilihSampaiTanggalLaporan"-->
-            <!--                android:layout_marginLeft="5dp"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="35dp"-->
-            <!--                android:text="Pilih Tanggal"-->
-            <!--                android:textAllCaps="false"-->
-            <!--                android:textSize="12sp"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:background="@drawable/bg_round"-->
-            <!--                android:backgroundTint="@color/colorAccent"-->
-            <!--                android:textColor="@color/colorWhite"-->
-            <!--                android:fontFamily="@font/abeezee"-->
-            <!--                />-->
-
-
-            <!--        </LinearLayout>-->
-
-            <!--        <View-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="1dp"-->
-            <!--            android:background="#8A8A8A"-->
-            <!--            android:layout_marginBottom="5dp"-->
-            <!--            android:layout_marginLeft="5dp"-->
-            <!--            android:layout_marginRight="5dp"-->
-            <!--            android:layout_marginTop="5dp"-->
-            <!--            />-->
-
-
-            <!--        <LinearLayout-->
-            <!--            android:layout_marginTop="10dp"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:orientation="horizontal"-->
-            <!--            android:layout_gravity="center"-->
-            <!--            android:layout_margin="5dp"-->
-            <!--            >-->
-
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/laporan_pilihTanggal"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_weight="1"-->
-            <!--                android:hint="Tanggal Pengiriman Laporan"-->
-            <!--                android:textSize="13sp"-->
-            <!--                android:fontFamily="@font/abeezee"-->
-            <!--                />-->
-
-            <!--            <Button-->
-            <!--                android:id="@+id/btn_pilihTanggalLaporan"-->
-            <!--                android:layout_marginLeft="5dp"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="35dp"-->
-            <!--                android:text="Pilih Tanggal"-->
-            <!--                android:textAllCaps="false"-->
-            <!--                android:textSize="12sp"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:background="@drawable/bg_round"-->
-            <!--                android:backgroundTint="@color/colorAccent"-->
-            <!--                android:textColor="@color/colorWhite"-->
-            <!--                android:fontFamily="@font/abeezee"-->
-            <!--                />-->
-
-
-            <!--        </LinearLayout>-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -338,6 +227,7 @@
                     android:layout_marginRight="3dp"
                     android:fontFamily="@font/abeezee"
                     android:text="Pilih Kategori :"
+                    android:textSize="15sp"
                     android:textColor="#000" />
 
                 <Spinner
@@ -356,6 +246,79 @@
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori1"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
+
+
 
             <TextView
                 android:id="@+id/tambahData2"
@@ -403,6 +366,77 @@
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori2"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
 
 
             <TextView
@@ -454,6 +488,76 @@
                     android:textAlignment="center" />
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori3"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
 
             <TextView
                 android:id="@+id/tambahData4"
@@ -501,8 +605,78 @@
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
 
-
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori4"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori4"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
 
             <TextView
                 android:id="@+id/tambahData5"
@@ -550,8 +724,197 @@
                     android:inputType="numberDecimal"
                     android:textAlignment="center" />
 
-
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori5"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori5"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
+
+
+            <TextView
+                android:id="@+id/tambahData6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Tambahkan Data Baru"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/spinner_laporan6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/spinner_laporan1"
+                app:layout_constraintStart_toStartOf="@id/spinner_laporan1"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/pilihKategori6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Pilih Kategori :"
+                    android:textColor="#000" />
+                <Spinner
+                    android:id="@+id/spinner_kategori6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:id="@+id/input_laporan_kategori6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_selesai_laporan6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textSelesaiKolom6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang sudah dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_selesai_kategori6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jumlah_belum_laporan6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/textBelumSelesaiKolom6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Jumlah yang belum dikerjakan :"
+                    android:textColor="#000" />
+
+
+                <EditText
+                    android:id="@+id/input_laporan_belum_kategori6"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="0"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/description_laporan_kategori6"
+                android:fontFamily="@font/abeezee"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="start"
+                android:inputType="textCapSentences|textMultiLine"
+                android:hint="Write a description"
+                android:background="@drawable/bg_round3"
+                android:backgroundTint="#7CE4E3E3"
+                android:textColor="#555252"
+                />
 
 
         </LinearLayout>

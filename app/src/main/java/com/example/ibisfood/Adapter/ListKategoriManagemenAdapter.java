@@ -2,14 +2,17 @@ package com.example.ibisfood.Adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,6 +35,7 @@ public class ListKategoriManagemenAdapter extends RecyclerView.Adapter<ListKateg
     Context context;
     List<SpinnerModel> mData;
     private Activity activity;
+    FirebaseDataListener listener;
 
     //Deklarasi objek dari Interfece
 //    dataListener listener;
@@ -45,6 +49,7 @@ public class ListKategoriManagemenAdapter extends RecyclerView.Adapter<ListKateg
     public ListKategoriManagemenAdapter(Context context, List<SpinnerModel> mData) {
         this.context = context;
         this.mData = mData;
+        listener = (FirebaseDataListener) context;
     }
 
 
@@ -62,6 +67,47 @@ public class ListKategoriManagemenAdapter extends RecyclerView.Adapter<ListKateg
     @Override
     public void onBindViewHolder(@NonNull final ListKategoriManagemenAdapter.Myholder holder, final int position) {
         holder.nameKategori.setText(mData.get(position).getNameKategori());
+
+
+        holder.cv_kategori.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //update dan delete kategori
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.dialog_view_kategori_managemen);
+                dialog.setTitle("Pilih Aksi");
+                dialog.show();
+
+                Button editButton = (Button) dialog.findViewById(R.id.bt_edit_data_kategori);
+                Button delButton = (Button) dialog.findViewById(R.id.bt_delete_data_kategori);
+
+                //apabila tombol edit diklik
+                editButton.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialog.dismiss();
+                                context.startActivity(UpdateKategoriActivity.getActIntent((Activity) context).putExtra("Kategori", (Parcelable) mData.get(position)));
+                            }
+                        }
+                );
+
+                //apabila tombol delete diklik
+                delButton.setOnClickListener(
+                        new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                /**
+                                 *  Kodingan untuk Delete data (memanggil interface delete data)
+                                 */
+                                dialog.dismiss();
+                                listener.onDeleteData(mData.get(position), position);
+                            }
+                        }
+                );
+                return true;
+            }
+        });
 //        holder.cv_kategori.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -176,5 +222,9 @@ public class ListKategoriManagemenAdapter extends RecyclerView.Adapter<ListKateg
     //Membuat Interfece
     public interface dataListener {
         void onDeleteData(SpinnerModel data, int position);
+    }
+
+    public interface FirebaseDataListener{
+        void onDeleteData(SpinnerModel spinnerModel, int position);
     }
 }

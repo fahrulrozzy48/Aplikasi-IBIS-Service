@@ -17,14 +17,10 @@
         <activity android:name=".AdminUI.UpdateKategoriActivity"></activity>
         <activity android:name=".UserUI.SettingUserActivity" />
         <activity android:name=".AdminUI.AddPostFeedsAdminActivity" />
-        <activity android:name=".AdminUI.RequestDetailActivity" />
-        <activity android:name=".ManagerUI.RequestApprovalDetailActivity" />
-        <activity android:name=".AdminUI.PermissionRequestActivity" />
         <activity android:name=".StaffUI.JobDetailActivity" />
         <activity android:name=".StaffUI.StaffActivity" />
         <activity android:name=".ManagerUI.ReportDetailActivity" />
         <activity android:name=".AdminUI.LaporanBulananAdminActivity" />
-        <activity android:name=".AdminUI.ManajemenKategoriActivity" />
         <activity android:name=".ManagerUI.ManagerActivity" />
         <activity android:name=".UserUI.WebviewIbisHotelActivity" />
         <activity android:name=".AdminUI.MessageDetailActivity" />

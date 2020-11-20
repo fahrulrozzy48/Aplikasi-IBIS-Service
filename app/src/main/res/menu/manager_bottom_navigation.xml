@@ -9,11 +9,7 @@
         android:id="@+id/nav_report_list"
         android:icon="@drawable/ic_baseline_assignment_24"
         android:title="Report List" />
-    <item
-        android:id="@+id/nav_approval"
-        android:icon="@drawable/ic_literature_filled"
-        android:title="Approval"
-        />
+
     <item
         android:id="@+id/nav_profil_manager"
         android:icon="@drawable/ic_user"

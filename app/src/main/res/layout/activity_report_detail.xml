@@ -113,6 +113,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
+                android:textColor="#000"
                 />
 
             <!--            Spinner-->
@@ -262,6 +263,94 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_satu"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_satu"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_satu"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_satu"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_deskripsi_satu"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 >
@@ -294,6 +383,94 @@
                     />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_dua"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_dua"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_dua"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_dua"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_deskripsi_dua"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -336,6 +513,94 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_tiga"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_tiga"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_tiga"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_tiga"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_deskripsi_tiga"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 >
@@ -373,6 +638,94 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_empat"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_empat"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_empat"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_empat"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detail_deskripsi_empat"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 >
@@ -405,6 +758,225 @@
                     />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_lima"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_lima"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_lima"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_lima"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/detail_deskripsi_lima"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                >
+                <TextView
+                    android:id="@+id/detail_kategori_enam"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_enam"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="17sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textselsai_enam"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_selesai_enam"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#4CAF50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                >
+                <TextView
+                    android:id="@+id/detail_textbelumselsai_enam"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/detail_input_kategori_belumselesai_enam"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#F44336"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:fontFamily="@font/abeezee"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/detail_deskripsi_enam"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#878684"
+                android:text=""
+                android:textSize="13sp"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/abeezee"
+                android:layout_marginBottom="20dp"
+                />
         </LinearLayout>
 
     </ScrollView>

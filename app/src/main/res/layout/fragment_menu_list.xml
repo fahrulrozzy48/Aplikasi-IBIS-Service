@@ -39,44 +39,14 @@
             android:orientation="vertical">
 
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_RequestManager"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:layout_margin="15dp"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="7dp">
 
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:background="@drawable/menu_permission2"
-                     />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="center"
-                    android:text="PERMISSION REQUEST"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
-            </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView_LaporanMingguan"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"
+                android:layout_margin="15dp"
                 app:cardCornerRadius="7dp"
                 app:cardElevation="7dp">
 
@@ -132,36 +102,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_SpinnerKategori"
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"
-                app:cardCornerRadius="7dp"
-                app:cardElevation="7dp">
 
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@drawable/menu_category"
-                    android:padding="10dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="center"
-                    android:text="CATEGORY MANAGEMENT"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
-            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </ScrollView>
