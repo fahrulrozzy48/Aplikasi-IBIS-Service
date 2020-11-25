@@ -8,6 +8,12 @@
         android:title="Job List" />
 
     <item
+        android:id="@+id/nav_tools_staff"
+        android:icon="@drawable/ic_baseline_tools"
+        android:title="Tools"
+        />
+
+    <item
         android:id="@+id/nav_profil_staff"
         android:icon="@drawable/ic_user"
         android:title="Profil"

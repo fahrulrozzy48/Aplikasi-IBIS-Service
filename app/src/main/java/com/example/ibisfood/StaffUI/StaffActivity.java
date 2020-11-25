@@ -55,6 +55,9 @@ public class StaffActivity extends AppCompatActivity {
                 case R.id.nav_job_list_staff:
                     pilihFragment = new ListWorkStaffFragment();
                     break;
+                    case R.id.nav_tools_staff:
+                    pilihFragment = new ToolsStaffFragment();
+                    break;
                 case R.id.nav_profil_staff:
                     pilihFragment = new ProfilStaffFragment();
                     break;

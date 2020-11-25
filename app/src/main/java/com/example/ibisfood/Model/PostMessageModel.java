@@ -8,7 +8,7 @@ public class PostMessageModel {
     private String pTitle;
     private String pKategori;
     private String pDescription;
-    private String pImage;
+//    private String pImage;
     private String postKey;
     private  Object pTime;
 
@@ -25,12 +25,12 @@ public class PostMessageModel {
     public PostMessageModel() {
     }
 
-    public PostMessageModel(String uEmail, String pTitle, String pKategori, String pDescription, String pImage, String staffEmailJob, String staffImageJob, String staffDescriptionJob, String staffStatusJob) {
+    public PostMessageModel(String uEmail, String pTitle, String pKategori, String pDescription, String staffEmailJob, String staffImageJob, String staffDescriptionJob, String staffStatusJob) {
         this.uEmail = uEmail;
         this.pTitle = pTitle;
         this.pKategori = pKategori;
         this.pDescription = pDescription;
-        this.pImage = pImage;
+//        this.pImage = pImage;
         this.pTime = ServerValue.TIMESTAMP;
         this.staffEmailJob = staffEmailJob;
         this.staffImageJob = staffImageJob;
@@ -105,13 +105,13 @@ public class PostMessageModel {
         this.pDescription = pDescription;
     }
 
-    public String getpImage() {
-        return pImage;
-    }
-
-    public void setpImage(String pImage) {
-        this.pImage = pImage;
-    }
+//    public String getpImage() {
+//        return pImage;
+//    }
+//
+//    public void setpImage(String pImage) {
+//        this.pImage = pImage;
+//    }
 
 
 

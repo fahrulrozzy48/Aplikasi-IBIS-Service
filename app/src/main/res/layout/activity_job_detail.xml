@@ -9,121 +9,110 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/job_detail_image"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/rsz_upload"
-                android:backgroundTint="@color/colorPrimaryDark"
-                />
+            <!--            <ImageView-->
+            <!--                android:id="@+id/job_detail_image"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="400dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:background="@drawable/rsz_upload"-->
+            <!--                android:backgroundTint="@color/colorPrimaryDark"-->
+            <!--                />-->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal"-->
-<!--                android:layout_margin="10dp"-->
-<!--                >-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Dari         : "-->
-<!--                    android:fontFamily="@font/abeezee"-->
-<!--                    android:textSize="17sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    />-->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                >-->
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Dari         : "-->
+            <!--                    android:fontFamily="@font/abeezee"-->
+            <!--                    android:textSize="17sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    />-->
 
-<!--                <TextView-->
-<!--                    android:id="@+id/detail_email"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_weight="1"-->
-<!--                    android:text="ibis@ibis.co.id"-->
-<!--                    android:fontFamily="@font/abeezee"-->
-<!--                    android:textSize="17sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    android:textColor="@color/colorAccent"-->
-<!--                    />-->
-
+            <!--                <TextView-->
+            <!--                    android:id="@+id/detail_email"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:text="ibis@ibis.co.id"-->
+            <!--                    android:fontFamily="@font/abeezee"-->
+            <!--                    android:textSize="17sp"-->
+            <!--                    android:textStyle="bold"-->
+            <!--                    android:textColor="@color/colorAccent"-->
+            <!--                    />-->
 
 
-
-<!--            </LinearLayout>-->
+            <!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="10dp"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
                     android:text="Dari         : "
                     android:textColor="#000"
-                    android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/job_detail_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="ibis@ibis.co.id"
                     android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:text="ibis@ibis.co.id"
                     android:textColor="@color/colorAccent"
-                    />
-
-
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
-
-
 
 
             <!--            Spinner-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                >
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
                     android:text="Kategori  : "
                     android:textColor="#000"
-                    android:fontFamily="@font/abeezee"
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/job_detail_kategori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Makanan"
                     android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:text="Makanan"
                     android:textColor="@color/colorAccent"
-                    />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -132,80 +121,74 @@
                 android:id="@+id/job_detail_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="17.56"
                 android:layout_gravity="start"
-                android:fontFamily="@font/abeezee"
-                android:textSize="13sp"
                 android:layout_marginLeft="10dp"
-                />
+                android:fontFamily="@font/abeezee"
+                android:text="17.56"
+                android:textSize="13sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E6E6E6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                />
+                android:background="#E6E6E6" />
 
 
             <TextView
                 android:id="@+id/job_detail_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/abeezee"
                 android:text="HAHAHAHA "
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:fontFamily="@font/abeezee"
 
                 />
 
             <TextView
                 android:id="@+id/job_detail_description"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
-                android:textSize="15sp"
-                android:layout_marginRight="10dp"
-                android:textColor="#000"
                 android:layout_marginLeft="10dp"
-                android:fontFamily="@font/abeezee"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
-                />
+                android:fontFamily="@font/abeezee"
+                android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
+                android:textColor="#000"
+                android:textSize="15sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E6E6E6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                />
-
+                android:background="#E6E6E6" />
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="5dp"
-                >
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Status                   : "
                     android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:text="Status                   : "
                     android:textColor="#000"
-                    />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/job_detail_status_staff"
@@ -223,32 +206,30 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                >
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dikerjakan oleh     : "
                     android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:text="Dikerjakan oleh     : "
                     android:textColor="#000"
-                    />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/job_detail_email_staff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="staff@ibis.co.id"
                     android:fontFamily="@font/abeezee"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
+                    android:text="staff@ibis.co.id"
                     android:textColor="@color/colorAccent"
-                    />
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -256,169 +237,184 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/abeezee"
-                android:text="Foto Bukti Pekerjaan"
-                android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                />
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="Foto Bukti Pekerjaan" />
 
 
             <androidx.cardview.widget.CardView
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 app:cardCornerRadius="10dp">
+
                 <ImageView
                     android:id="@+id/job_detail_image_staff"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
-                    android:scaleType="centerCrop"
-                    />
+                    android:scaleType="centerCrop" />
 
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/job_detail_description_staff"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
-                android:textSize="15sp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Detail Masalah dan Solusi"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
-                />
+                android:background="@drawable/bg_round"
+                android:backgroundTint="@color/colorWhite"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/job_detail_description_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Hahahahahahahahahahahaaaaaaaaaaaaaaaaaa asdadasada "
+                    android:textSize="15sp" />
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E6E6E6"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                />
+                android:background="#E6E6E6" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Form Pengerjaan"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="@font/abeezee"
-
-                />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Apakah selesai dikerjakan? "
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Form Pengerjaan"
                 android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
                 />
 
-            <RadioButton
-                android:id="@+id/job_radio_status"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="Selesai"
-                android:textSize="15sp"
-                android:fontFamily="@font/abeezee"
-                android:textColor="@color/colorPrimaryDark"
-                />
-        </LinearLayout>
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Apakah selesai dikerjakan? "
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/job_radio_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/abeezee"
+                    android:text="Selesai"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/abeezee"
-                android:text="Sertakan Foto Bukti"
-                android:gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                />
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="Sertakan Foto Bukti" />
 
             <androidx.cardview.widget.CardView
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:id="@+id/cardView_Panorama"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
                     android:id="@+id/job_image_service"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
-                    android:scaleType="centerCrop"
-                    android:background="@drawable/rsz_upload"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:background="@drawable/rsz_upload"
+                    android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
 
             <EditText
                 android:id="@+id/job_description_service"
-                android:fontFamily="@font/abeezee"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:padding="10dp"
-                android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:gravity="start"
-                android:inputType="textCapSentences|textMultiLine"
-                android:hint="Write a description of problem services"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/bg_round3"
                 android:backgroundTint="#7CCCCBCB"
+                android:fontFamily="@font/abeezee"
+                android:gravity="start"
+                android:hint="Write a description of problem services"
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="10dp"
                 android:textColor="#000"
-                />
+                android:textSize="15sp" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/abeezee"
-                android:text="*Disclaimer : Jika sudah melakukan upload bukti pekerjaan, tidak bisa melakukan upload lagi."
-                android:textStyle="italic"
-                android:textSize="12sp"
-                android:gravity="center"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
-                />
+                android:fontFamily="@font/abeezee"
+                android:gravity="center"
+                android:text="*Disclaimer : Jika sudah melakukan upload bukti pekerjaan, tidak bisa melakukan upload lagi."
+                android:textSize="12sp"
+                android:textStyle="italic" />
 
             <Button
                 android:id="@+id/btn_send_accept_job"
-                android:layout_marginTop="10dp"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_round"
+                android:fontFamily="@font/abeezee"
                 android:text="Send"
                 android:textColor="@color/colorWhite"
-                android:fontFamily="@font/abeezee"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_margin="20dp"
 
                 />
 

@@ -80,7 +80,7 @@ public class ListJobListAdapter extends RecyclerView.Adapter<ListJobListAdapter.
                     postJobDetailActivity.putExtra("pKategori",mData.get(position).getpKategori());
                     postJobDetailActivity.putExtra("pDescription",mData.get(position).getpDescription());
                     postJobDetailActivity.putExtra("postKey",mData.get(position).getPostKey());
-                    postJobDetailActivity.putExtra("pImage",mData.get(position).getpImage());
+//                    postJobDetailActivity.putExtra("pImage",mData.get(position).getpImage());
 
                     //staff get data
                     postJobDetailActivity.putExtra("staffEmailJob",mData.get(position).getStaffEmailJob());

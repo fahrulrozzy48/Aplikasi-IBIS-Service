@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MessageDetailActivity extends AppCompatActivity {
 
-    ImageView detailImage;
+//    ImageView detailImage;
     TextView detailEmail, detailDescription, detailTime, detailTitle;
     TextView detailKategori;
     String PostKey;
@@ -46,7 +46,7 @@ public class MessageDetailActivity extends AppCompatActivity {
         detailDescription = findViewById(R.id.detail_description);
         detailTitle = findViewById(R.id.detail_title);
         detailTime = findViewById(R.id.detail_time);
-        detailImage = findViewById(R.id.detail_image);
+//        detailImage = findViewById(R.id.detail_image);
 
         detailKategori = findViewById(R.id.detail_kategori);
 
@@ -57,8 +57,8 @@ public class MessageDetailActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
 
 
-        String postImage = getIntent().getExtras().getString("pImage") ;
-        Glide.with(this).load(postImage).into(detailImage);
+//        String postImage = getIntent().getExtras().getString("pImage") ;
+//        Glide.with(this).load(postImage).into(detailImage);
 
         String postTitle = getIntent().getExtras().getString("pTitle");
         detailTitle.setText(postTitle);

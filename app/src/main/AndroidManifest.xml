@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminUI.UpdateKategoriActivity"></activity>
+        <activity android:name=".StaffUI.StaffEmailActivity"></activity>
+        <activity android:name=".AdminUI.UpdateKategoriActivity" />
         <activity android:name=".UserUI.SettingUserActivity" />
         <activity android:name=".AdminUI.AddPostFeedsAdminActivity" />
         <activity android:name=".StaffUI.JobDetailActivity" />

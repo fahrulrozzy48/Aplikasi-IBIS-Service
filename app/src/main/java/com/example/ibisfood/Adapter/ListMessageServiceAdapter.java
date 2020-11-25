@@ -108,7 +108,7 @@ public class ListMessageServiceAdapter extends RecyclerView.Adapter<ListMessageS
                     postDetailMessageActivity.putExtra("pKategori",mData.get(position).getpKategori());
                     postDetailMessageActivity.putExtra("pDescription",mData.get(position).getpDescription());
                     postDetailMessageActivity.putExtra("postKey",mData.get(position).getPostKey());
-                    postDetailMessageActivity.putExtra("pImage",mData.get(position).getpImage());
+//                    postDetailMessageActivity.putExtra("pImage",mData.get(position).getpImage());
 
                     //staff get data
                     postDetailMessageActivity.putExtra("staffEmailJob",mData.get(position).getStaffEmailJob());

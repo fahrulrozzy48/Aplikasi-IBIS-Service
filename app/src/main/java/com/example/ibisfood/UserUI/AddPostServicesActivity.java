@@ -70,7 +70,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
     //    EditText noRoomService,titleService, descService;
     EditText titleService, descService;
-    ImageView imageService;
+//    ImageView imageService;
     //    Date tgl_pengajuan_date, tgl_staff_job_date;
     TextView tanggalPost;
     //    Button btnPilihTanggalPosting;
@@ -109,7 +109,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 //        permission();
 //        noRoomService = findViewById(R.id.no_room_service);
         titleService = findViewById(R.id.title_service);
-        imageService = findViewById(R.id.image_service);
+//        imageService = findViewById(R.id.image_service);
         descService = findViewById(R.id.description_service);
         btnService = findViewById(R.id.btn_send_service);
         context = this;
@@ -123,7 +123,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
         spinnerModel = new SpinnerModel();
 
-        String[] dataKategori ={"","Makanan", "Minuman", "Wifi", "Elektronik", "Kebersihan Tambahan"};
+        String[] dataKategori ={"","Makanan", "Minuman", "Wifi", "Elektronik", "Kesehatan", "Kebersihan"};
         ArrayList<String> arrayListKategori = new ArrayList<>(Arrays.asList(dataKategori));
         ArrayAdapter<String> arrayAdapterKategori = new ArrayAdapter<>(context,R.layout.style_spinner,arrayListKategori);
         spinner.setAdapter(arrayAdapterKategori);
@@ -141,7 +141,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
         //versi 2
 
-        setupImageClick();
+//        setupImageClick();
 
 
         btnService.setOnClickListener(new View.OnClickListener() {
@@ -153,7 +153,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
                 if (
                         !titleService.getText().toString().isEmpty() && !descService.getText().toString().isEmpty()
-                                && imageService != null
+
                 ) {
 
 
@@ -163,17 +163,17 @@ public class AddPostServicesActivity extends AppCompatActivity {
 //                    byte[] data = byteArrayOutputStream.toByteArray();
 
 
-
-                    StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("message_image");
-                    final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
-                    imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-
-                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                @Override
-                                public void onSuccess(Uri uri) {
-                                    String imageDownlaodLink = uri.toString();
+//
+//                    StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("message_image");
+//                    final StorageReference imageFilePath = storageReference.child(pickedImgUri.getLastPathSegment());
+//                    imageFilePath.putFile(pickedImgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                        @Override
+//                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//
+//                            imageFilePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//                                @Override
+//                                public void onSuccess(Uri uri) {
+//                                    String imageDownlaodLink = uri.toString();
                                     String title = titleService.getText().toString();
                                     String description = descService.getText().toString();
                                     String kategori = spinner.getSelectedItem().toString();
@@ -190,7 +190,7 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                             title,
                                             kategori,
                                             description,
-                                            imageDownlaodLink,
+//                                            imageDownlaodLink,
                                             namaStaffJob,
                                             imageStaffJob,
                                             descJobStaffJob,
@@ -202,28 +202,28 @@ public class AddPostServicesActivity extends AppCompatActivity {
                                     addPost(post);
 
 
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    // something goes wrong uploading picture
-
-                                    pd.dismiss();
-                                    showMessage(e.getMessage());
-
-
-                                }
-                            });
-
-
-                        }
-                    });
+//                                }
+//                            }).addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//                                    // something goes wrong uploading picture
+//
+//                                    pd.dismiss();
+//                                    showMessage(e.getMessage());
+//
+//
+//                                }
+//                            });
+//
+//
+//                        }
+//                    });
 
 
 
                 } else {
                     pd.dismiss();
-                    showMessage("Please verify all input fields, Date and choose Post Image");
+                    showMessage("Please verify all input fields");
 
                 }
 
@@ -288,16 +288,16 @@ public class AddPostServicesActivity extends AppCompatActivity {
 
 
     //versi 2
-    private void setupImageClick() {
-
-        imageService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                checkAndRequestForPermission();
-            }
-        });
-    }
+//    private void setupImageClick() {
+//
+//        imageService.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                checkAndRequestForPermission();
+//            }
+//        });
+//    }
 
     private void openGallery() {
         //TODO: open gallery intent and wait for user to pick an image !
@@ -383,10 +383,10 @@ public class AddPostServicesActivity extends AppCompatActivity {
             // the user has successfully picked an image
             // we need to save its reference to a Uri variable
             pickedImgUri = data.getData();
-            imageService.setImageURI(pickedImgUri);
+//            imageService.setImageURI(pickedImgUri);
 
         } else if (requestCode == CAMERA_IMAGE_CODE) {
-            imageService.setImageURI(pickedImgUri);
+//            imageService.setImageURI(pickedImgUri);
         }
 
 

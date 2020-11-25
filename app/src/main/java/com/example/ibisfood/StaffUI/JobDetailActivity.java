@@ -48,7 +48,7 @@ import java.util.Locale;
 
 public class JobDetailActivity extends AppCompatActivity {
 
-    ImageView detailJobImage;
+//    ImageView detailJobImage;
     TextView detailJobDescription, detailJobNoKamar, detailJoblTime, detailJobTitle, detailJobEmailUser;
     TextView detailJobKategori;
     String PostKey;
@@ -94,7 +94,7 @@ public class JobDetailActivity extends AppCompatActivity {
 //        detailJobNoKamar = findViewById(R.id.job_detail_no_kamar);
         detailJobEmailUser = findViewById(R.id.job_detail_email);
         detailJobKategori = findViewById(R.id.job_detail_kategori);
-        detailJobImage = findViewById(R.id.job_detail_image);
+//        detailJobImage = findViewById(R.id.job_detail_image);
         detailJobTitle = findViewById(R.id.job_detail_title);
         detailJobDescription = findViewById(R.id.job_detail_description);
         detailJoblTime = findViewById(R.id.job_detail_time);
@@ -106,8 +106,8 @@ public class JobDetailActivity extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference("PostMessage");
 
 
-        String postImage = getIntent().getExtras().getString("pImage") ;
-        Glide.with(this).load(postImage).into(detailJobImage);
+//        String postImage = getIntent().getExtras().getString("pImage") ;
+//        Glide.with(this).load(postImage).into(detailJobImage);
 
         String postTitle = getIntent().getExtras().getString("pTitle");
         detailJobTitle.setText(postTitle);
@@ -200,7 +200,7 @@ public class JobDetailActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String imageDownlaodLink = uri.toString();
                                     jobDesc = jobStaffDescription.getText().toString();
-                                    String imageDownlaod = getIntent().getExtras().getString("pImage");
+//                                    String imageDownlaod = getIntent().getExtras().getString("pImage");
 //                                    String no_room = detailJobNoKamar.getText().toString();
                                     String title = detailJobTitle.getText().toString();
                                     String description = detailJobDescription.getText().toString();
@@ -212,7 +212,7 @@ public class JobDetailActivity extends AppCompatActivity {
                                     postUpdateJob.setpTitle(title);
                                     postUpdateJob.setuEmail(email);
                                     postUpdateJob.setpTime(tgl_pengajuan_date.getTime());
-                                    postUpdateJob.setpImage(imageDownlaod);
+//                                    postUpdateJob.setpImage(imageDownlaod);
                                     postUpdateJob.setpKategori(kategori);
                                     postUpdateJob.setpDescription(description);
                                     postUpdateJob.setStaffEmailJob(firebaseUser.getEmail());
