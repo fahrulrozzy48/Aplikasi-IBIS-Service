@@ -5,11 +5,13 @@
     >
 
     <item
-
         android:id="@+id/nav_report_list"
         android:icon="@drawable/ic_baseline_assignment_24"
         android:title="Report List" />
-
+    <item
+        android:id="@+id/nav_performance_staff"
+        android:icon="@drawable/ic_baseline_performance"
+        android:title="Performance Staff" />
     <item
         android:id="@+id/nav_profil_manager"
         android:icon="@drawable/ic_user"

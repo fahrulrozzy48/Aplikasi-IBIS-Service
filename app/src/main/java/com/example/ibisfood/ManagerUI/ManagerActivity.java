@@ -46,6 +46,9 @@ public class ManagerActivity extends AppCompatActivity {
                 case R.id.nav_report_list:
                     pilihFragment = new DataReportFragment();
                     break;
+                case R.id.nav_performance_staff:
+                    pilihFragment = new PerformanceStaffFragment();
+                    break;
                 case R.id.nav_profil_manager:
                     pilihFragment = new ProfilManagerFragment();
                     break;

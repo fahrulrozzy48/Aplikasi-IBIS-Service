@@ -21,11 +21,17 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.ibisfood.Model.UserModel;
 import com.example.ibisfood.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -35,11 +41,14 @@ public class HomeFragment extends Fragment {
     CarouselView carouselView;
     int[] sampleImages = {R.drawable.banner1, R.drawable.banner2, R.drawable.banner3, R.drawable.banner4};
 
-    private FirebaseAuth mAuth;
 
     TextView identitas;
 
-    FirebaseUser currentUser;
+    private FirebaseAuth mAuth;
+    FirebaseUser currentUser ;
+    FirebaseDatabase database;
+    DatabaseReference databaseReference;
+    private String userId;
 
     CardView btnTutorial;
     BottomSheetBehavior sheetBehavior, sheetBehavior2;
@@ -69,11 +78,31 @@ public class HomeFragment extends Fragment {
         sheetBehavior = BottomSheetBehavior.from(bottom_sheet);
         sheetBehavior2 = BottomSheetBehavior.from(bottom_sheet);
 
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference("User");
+
+
         mAuth = FirebaseAuth.getInstance();
 
         currentUser = mAuth.getCurrentUser();
 
-        identitas.setText(currentUser.getEmail());
+        userId = currentUser.getUid();
+
+
+        databaseReference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                UserModel userNama = snapshot.getValue(UserModel.class);
+
+                identitas.setText(userNama.getUsername());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
         view = getLayoutInflater().inflate(R.layout.tutorial_buttom_sheet_dialog,null);
